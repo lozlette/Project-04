@@ -1,6 +1,7 @@
 from app import app, db
 from models.ingredient import Ingredient
 from models.recipe import Recipe
+from models.user import User
 
 with app.app_context():
     db.drop_all()
@@ -19,5 +20,13 @@ extra_ingredients='140g butter, softened, plus extra for the tin, 140g caster su
 method='1. Heat oven to 180C/160C fan/gas. 2. Butter a 2lb loaf tin and line the base and sides with baking parchment. 3. Cream 140g softened butter and 140g caster sugar until light and fluffy, then slowly add 2 beaten large eggs with a little of the 140g flour. 4. Fold in the remaining flour, 1 tsp baking powder and 2 mashed bananas. 5. Pour into the tin and bake for about 30 mins until a skewer comes out clean. 6. Cool in the tin for 10 mins, then remove to a wire rack. 7. Mix 50g icing sugar with 2-3 tsp water to make a runny icing. 8. Drizzle the icing across the top of the cake and decorate with a handful of banana chips.'
 )
 db.session.add(banana_bread)
+
+lauren = User(
+name='Lauren',
+email='lauren@bell.com',
+password_hash='password',
+avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic.png'
+)
+db.session.add(lauren)
 
 db.session.commit()
