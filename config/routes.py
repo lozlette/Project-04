@@ -1,5 +1,8 @@
 import os
 from app import app
+from controllers import ingredients
+
+app.register_blueprint(ingredients.api, url_prefix='/api')
 
 @app.route('/', defaults={'path': ''}) # homepage
 @app.route('/<path:path>') # any other path

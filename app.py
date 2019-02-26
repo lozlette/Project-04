@@ -11,5 +11,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
+@app.route('/')
+def home():
+    return ('Hello World!'), 200
+
 # pylint: disable=W0611,C0413
 from config import routes
