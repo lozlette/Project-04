@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify, g
 from models.ingredient import Ingredient, IngredientSchema
 
+
 api = Blueprint('ingredients', __name__)
 
 ingredients_schema = IngredientSchema(many=True)
