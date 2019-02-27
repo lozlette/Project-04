@@ -14,11 +14,19 @@ image='https://i5.walmartimages.ca/images/Enlarge/580/6_r/875806_R.jpg',
 nutrition_information='Vitamin B6 - 0.5 mg, Manganese - 0.3 mg, Vitamin C - 9 mg, Potassium - 450 mg, Dietary Fiber - 3g, Protein - 1 g, Magnesium - 34 mg, Folate - 25.0 mcg.')
 db.session.add(banana)
 
+<<<<<<< HEAD
+banana_bread = Recipe(
+name='Banana Bread',
+image='https://www.inspiredtaste.net/wp-content/uploads/2016/12/Easy-Banana-Bread-Recipe-1-1200.jpg',
+extra_ingredients='140g butter, softened, plus extra for the tin, 140g caster sugar, 2 large eggs, beaten, 140g self-raising flour, 1 tsp baking powder, 2 very ripe bananas, mashed, 50g icing sugar, handful dried banana chips, for decoration',
+method='1. Heat oven to 180C/160C fan/gas. 2. Butter a 2lb loaf tin and line the base and sides with baking parchment. 3. Cream 140g softened butter and 140g caster sugar until light and fluffy, then slowly add 2 beaten large eggs with a little of the 140g flour. 4. Fold in the remaining flour, 1 tsp baking powder and 2 mashed bananas. 5. Pour into the tin and bake for about 30 mins until a skewer comes out clean. 6. Cool in the tin for 10 mins, then remove to a wire rack. 7. Mix 50g icing sugar with 2-3 tsp water to make a runny icing. 8. Drizzle the icing across the top of the cake and decorate with a handful of banana chips.',
+=======
 banana_carrot_seed_bread = Recipe(
 name='BLW Banana, Carrot and Seed Bread',
 image='https://www.annabelkarmel.com/wp-content/uploads/2017/05/412243735Loaf_Work-e1493997814752-380x315.jpg',
 extra_ingredients='150g / 5oz softened unsalted butter, 2 large eggs, 200g/ 7oz ripe bananas, peeled and mashed, 125g / 4½oz grated carrot, 25g / 1oz sultanas, 125g / 4½oz soft dark brown sugar, 225g / 8oz self-raising flour, ½ teaspoon ground cinnamon, 1 teaspoon mixed spice, 1 teaspoon ground ginger, 25g / 1oz pumpkin seeds, 25g / 1oz sunflower seeds, Butter, for spreading and greasing',
 method='1.Preheat the oven to 170°C/340°F/Gas 3, grease a 900 g/2 lb loaf tin and line it with baking parchment.2.Place all of the ingredients, except the topping, in a large mixing bowl. Whisk together with an electric hand-held whisk for 1–2 minutes until light and fluffy. Alternatively, use a stand mixer fitted with the paddle or whisk attachment. 3.Spoon the mixture into the tin and level out the top. 4.Sprinkle with the extra seeds and bake for 1–1¼ hours until golden, well risen and a skewer inserted comes out clean. 5.Remove from the oven and leave to cool on a wire rack, then remove from the tin. Dust with icing sugar (if using), cut into slices, spread with butter and serve.',
+>>>>>>> development
 ingredients=[banana]
 )
 db.session.add(banana_carrot_seed_bread)
