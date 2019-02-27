@@ -9,7 +9,7 @@ class Ingredient(db.Model, BaseModel):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), nullable=False)
-    image_url = db.Column(db.String(200), nullable=False)
+    image = db.Column(db.String(200), nullable=False)
     nutrition_information = db.Column(db.String(500), nullable=False)
 
 class IngredientSchema(ma.ModelSchema, BaseSchema):
