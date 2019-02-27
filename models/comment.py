@@ -1,6 +1,7 @@
 from app import db, ma
+from .base import BaseModel, BaseSchema
 
-class Comment(db.Model):
+class Comment(db.Model, BaseModel):
 
     __tablename__ = 'comments'
 
@@ -12,7 +13,7 @@ class Comment(db.Model):
     recipes = db.relationship('Recipe', backref='comments')
 
 
-class CommentSchema(ma.ModelSchema):
+class CommentSchema(ma.ModelSchema, BaseSchema):
 
     class Meta:
         model = Comment

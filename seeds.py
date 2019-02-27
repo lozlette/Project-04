@@ -22,15 +22,15 @@ ingredients=[banana]
 )
 db.session.add(banana_bread)
 
-lauren = User(
-name='Lauren',
-email='lauren@bell.com',
-password_hash='password',
-avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic.png'
-)
-db.session.add(lauren)
+# lauren = User(
+# name='Lauren',
+# email='lauren@bell.com',
+# password_hash='password',
+# avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic.png'
+# )
+# db.session.add(lauren)
 
-comment1 = Comment(content='This is a yummy recipe.', recipes=banana_bread, users=lauren)
+comment1 = Comment(content='This is a yummy recipe.', recipes=banana_bread)
 db.session.add(comment1)
 
 db.session.commit()

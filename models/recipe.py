@@ -1,5 +1,6 @@
 from app import db, ma
 from marshmallow import fields
+from .base import BaseModel, BaseSchema
 
 ingredients_recipes = db.Table(
     'ingredients_recipes',
@@ -7,7 +8,7 @@ ingredients_recipes = db.Table(
     db.Column('recipe_id', db.Integer, db.ForeignKey('recipes.id'), primary_key=True)
 )
 
-class Recipe(db.Model):
+class Recipe(db.Model, BaseModel):
 
     __tablename__ = 'recipes'
 
@@ -18,7 +19,7 @@ class Recipe(db.Model):
     method = db.Column(db.String(1000), nullable=False)
     ingredients = db.relationship('Ingredient', secondary=ingredients_recipes, backref='recipes')
 
-class RecipeSchema(ma.ModelSchema):
+class RecipeSchema(ma.ModelSchema, BaseSchema):
 
     ingredient = fields.Nested('IngredientSchema', many=True, exclude=('recipes'))
 
