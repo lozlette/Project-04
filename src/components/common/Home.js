@@ -18,7 +18,7 @@ class Home extends React.Component {
                 Eat Something
               </h1>
               <h2 className="subtitle">
-                Find recipes based on what your toddler likes to eat...
+                Find recipes based on what you'd like your toddler to eat...
               </h2>
             </div>
           </div>
