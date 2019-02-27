@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Home from './components/common/Home'
 import Navbar from './components/common/Navbar'
 import IngredientsIndex from './components/Ingredients/IngredientsIndex'
-import IngredientsShow from './components/Ingredients/IngredientsShow'
+import RecipesShow from './components/Recipes/RecipesShow'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
@@ -23,7 +23,7 @@ class App extends React.Component{
 
             <Navbar />
             <Switch>
-              <Route path="/ingredients/:id" component={IngredientsShow} />
+              <Route path="/recipes/:id" component={RecipesShow} />
               <Route path="/ingredients" component={IngredientsIndex} />
               <Route path="/register" component={Register} />
               <Route path="/login" component={Login} />

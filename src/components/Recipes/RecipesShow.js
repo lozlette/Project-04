@@ -3,7 +3,7 @@ import 'bulma'
 import axios from 'axios'
 
 
-class IngredientsShow extends React.Component {
+class RecipesShow extends React.Component {
   constructor() {
     super()
 
@@ -19,7 +19,7 @@ class IngredientsShow extends React.Component {
   render(){
     if(!this.state.ingredients) return <h1>Loading...</h1>
     console.log(this.state.ingredients)
-    const { image, name, nutrition_information } = this.state.ingredients
+    const { image, name, nutrition_information } = this.state.ingredients 
     return(
       <div className="tile is-ancestor">
         <div className="tile is-vertical is-8">
@@ -55,4 +55,4 @@ class IngredientsShow extends React.Component {
   }
 }
 
-export default IngredientsShow
+export default RecipesShow

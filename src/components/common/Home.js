@@ -11,14 +11,14 @@ class Home extends React.Component {
   render(){
     return(
       <div>
-        <section className="hero is-success is-medium">
+        <section className="hero is-success is-small">
           <div className="hero-body">
             <div className="container">
               <h1 className="title">
                 Eat Something
               </h1>
               <h2 className="subtitle">
-                Find recipes based on what you'd like your toddler to eat...
+                Find recipes based on what your toddler likes to eat... and what you'd like your toddler to eat..
               </h2>
             </div>
           </div>

@@ -1,8 +1,45 @@
-.column{
+
+
+
+
+
+.column {
   height: 300px;
 }
 
 .text {
  color: black;
  font-weight: 200px;
+}
+
+.title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.navbar-item {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.isImage{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  height:300px;
+  width:300px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
