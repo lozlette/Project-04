@@ -172,7 +172,34 @@ ingredients=[courgette]
 )
 db.session.add(courgette_carrot_risotto)
 
+#
+# lauren = User(
+# username='Lauren',
+# email='lauren@bell.com',
+# password_hash='password',
+# avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic.png'
+# )
+# db.session.add(lauren)
+
+gessica = User(
+username='Gessica',
+email='gessica@mail.com',
+password_hash='password1',
+avatar='https://www.whatsappprofiledpimages.com/wp-content/uploads/2018/07/awesome-profile-pics-300x300.jpg'
+)
+db.session.add(gessica)
 comment1 = Comment(content='This is a yummy recipe.', recipes=banana_carrot_seed_bread)
+
+# lauren = User(
+# name='Lauren',
+# email='lauren@bell.com',
+# password_hash='password',
+# avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic.png'
+# )
+# db.session.add(lauren)
+
+
+
 db.session.add(comment1)
 
 db.session.commit()
