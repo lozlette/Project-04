@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Home from './components/common/Home'
+import Navbar from './components/common/Navbar'
 import IngredientsIndex from './components/Ingredients/IngredientsIndex'
 import IngredientsShow from './components/Ingredients/IngredientsShow'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
@@ -19,6 +20,8 @@ class App extends React.Component{
       <div>
         <BrowserRouter>
           <main>
+
+            <Navbar />
             <Switch>
               <Route path="/ingredients/:id" component={IngredientsShow} />
               <Route path="/ingredients" component={IngredientsIndex} />
