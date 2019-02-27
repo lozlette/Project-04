@@ -10,10 +10,10 @@ class User(db.Model, BaseModel):
 
     __tablename__ = 'users'
 
-<<<<<<< HEAD
+
     id = db.Column(db.Integer, primary_key=True)
-=======
->>>>>>> development
+
+
     username = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(100), nullable=False)
     password_hash = db.Column(db.String(128), nullable=True)

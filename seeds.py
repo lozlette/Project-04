@@ -14,14 +14,14 @@ image_url='https://i5.walmartimages.ca/images/Enlarge/580/6_r/875806_R.jpg',
 nutrition_information='Vitamin B6 - 0.5 mg, Manganese - 0.3 mg, Vitamin C - 9 mg, Potassium - 450 mg, Dietary Fiber - 3g, Protein - 1 g, Magnesium - 34 mg, Folate - 25.0 mcg.')
 db.session.add(banana)
 
-banana_bread = Recipe(
-name='Banana Bread',
-image_url='https://www.inspiredtaste.net/wp-content/uploads/2016/12/Easy-Banana-Bread-Recipe-1-1200.jpg',
-extra_ingredients='140g butter, softened, plus extra for the tin, 140g caster sugar, 2 large eggs, beaten, 140g self-raising flour, 1 tsp baking powder, 2 very ripe bananas, mashed, 50g icing sugar, handful dried banana chips, for decoration',
-method='1. Heat oven to 180C/160C fan/gas. 2. Butter a 2lb loaf tin and line the base and sides with baking parchment. 3. Cream 140g softened butter and 140g caster sugar until light and fluffy, then slowly add 2 beaten large eggs with a little of the 140g flour. 4. Fold in the remaining flour, 1 tsp baking powder and 2 mashed bananas. 5. Pour into the tin and bake for about 30 mins until a skewer comes out clean. 6. Cool in the tin for 10 mins, then remove to a wire rack. 7. Mix 50g icing sugar with 2-3 tsp water to make a runny icing. 8. Drizzle the icing across the top of the cake and decorate with a handful of banana chips.',
+banana_carrot_seed_bread = Recipe(
+name='BLW Banana, Carrot and Seed Bread',
+image_url='https://www.annabelkarmel.com/wp-content/uploads/2017/05/412243735Loaf_Work-e1493997814752-380x315.jpg',
+extra_ingredients='150g / 5oz softened unsalted butter, 2 large eggs, 200g/ 7oz ripe bananas, peeled and mashed, 125g / 4½oz grated carrot, 25g / 1oz sultanas, 125g / 4½oz soft dark brown sugar, 225g / 8oz self-raising flour, ½ teaspoon ground cinnamon, 1 teaspoon mixed spice, 1 teaspoon ground ginger, 25g / 1oz pumpkin seeds, 25g / 1oz sunflower seeds, Butter, for spreading and greasing',
+method='1.Preheat the oven to 170°C/340°F/Gas 3, grease a 900 g/2 lb loaf tin and line it with baking parchment.2.Place all of the ingredients, except the topping, in a large mixing bowl. Whisk together with an electric hand-held whisk for 1–2 minutes until light and fluffy. Alternatively, use a stand mixer fitted with the paddle or whisk attachment. 3.Spoon the mixture into the tin and level out the top. 4.Sprinkle with the extra seeds and bake for 1–1¼ hours until golden, well risen and a skewer inserted comes out clean. 5.Remove from the oven and leave to cool on a wire rack, then remove from the tin. Dust with icing sugar (if using), cut into slices, spread with butter and serve.',
 ingredients=[banana]
 )
-db.session.add(banana_bread)
+db.session.add(banana_carrot_seed_bread)
 
 
 carrot = Ingredient(
@@ -125,6 +125,54 @@ ingredients=[orange]
 )
 db.session.add(chocolate_orange_shortbread)
 
+cod = Ingredient(
+name='Cod',
+image_url='https://thecornishfishmonger.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/o/cod_fillet.jpg',
+nutrition_information='Total Fat 0.7g, Saturated Fat 0.1g, Cholesterol 43mg, Sodium 54mg, Protein 18g,Vitamin A 1 %, Vitamin C 2 %, Calcium 2 %, Iron 2 %')
+db.session.add(cod)
+
+cod_couscous_balls = Recipe(
+name='Cod & Couscous Balls',
+image_url='https://www.annabelkarmel.com/wp-content/uploads/2019/02/AK-2201201900275_8357_Uncropped-380x315.jpg',
+extra_ingredients='1 fillet of Cod 100g,couscous (cooked and cooled), 4 spring onions, sliced, 1 small carrot, peeled and grated, ½ apple, peeled and grated, 40g Parmesan, grated, 2 tbsp fresh basil , chopped, 1 egg yolk',
+method='Measure all of the ingredients into a food processor. Whiz until finely chopped. Add the egg yolk and season lightly. Shape into 20 balls. 2.Place on a baking sheet lined with non stick paper and drizzle with a little oil. 3. Bake for 20 minutes turning over halfway through the cooking time.',
+ingredients=[cod]
+)
+db.session.add(cod_couscous_balls)
+
+
+avocado = Ingredient(
+name='Avocado',
+image_url='https://images-na.ssl-images-amazon.com/images/I/81LKLCmdAQL._SY355_.jpg',
+nutrition_information='Fat 15 g, Saturated fat 2.1 g, Polyunsaturated fat 1.8 g, Monounsaturated fat 10 g, Sodium 7 mg, Potassium 485 mg, Carbohydrate 9 g, Dietary fiber 7, Sugar 0.7 g, Protein 2 g, Vitamin A 2%, Vitamin C 16%, Calcium 1%, Iron 3%, Vitamin D 0%, Vitamin B-6 15%, Cobalamin 0%, Magnesium 7%')
+db.session.add(avocado)
+
+avocado_banana_puree = Recipe(
+name='Avocado & Banana Puree',
+image_url='https://www.annabelkarmel.com/wp-content/uploads/2008/06/avocado-banana-puree-3-380x315.jpg',
+extra_ingredients='1/4 avocado, 1/2 smal ripe banana, 1 or 2 tbsp baby\'s usual milk or greek yoghurt',
+method='1.Mash the avocado together with the banana and the milk.2.You can also substitute the flesh of half a small papaya for the avocado. If using papaya, the milk is then optional.',
+ingredients=[avocado]
+)
+db.session.add(avocado_banana_puree)
+
+courgette = Ingredient(
+name='Courgette',
+image_url='https://www.planetorganic.com/images/products/large/10075.jpg',
+nutrition_information='Total Fat 0.3, Saturated fat 0.1 g, Polyunsaturated fat 0.1g, Sodium 8 mg, Potassium 261 mg, Carbohydrate 3.1 g,Dietary fiber 1 g, Sugar 2.5 g, Protein 1.2 g, Vitamin A 4%, Vitamin C 29%, Calcium 1%, Iron 2%, Vitamin D 0%, Vitamin B-6 10%, Magnesium 4%'
+)
+db.session.add(courgette)
+
+courgette_carrot_risotto = Recipe(
+name='Courgette & Carrot Risotto',
+image_url='https://www.annabelkarmel.com/wp-content/uploads/2009/05/Summer-Risotto-3-380x315.jpg',
+extra_ingredients='900 ml vegetable stock or chicken stock, 4 large shallots or one onion, finely chopped, 1 garlic clove, crushed, 40 g butter, 1 tbsp olive oil, 40 g red pepper, chopped, 200 g arborio (risotto) rice, 75 g courgette, diced, 2 medium tomatoes, skinned, de-seeded & chopped (approx. 225 g), 4 tbsp white wine (for adult version), 40 g Italian hard style cheese, grated',
+method='1.Bring the stock to the boil and allow to simmer. Heat the oil and butter in a large frying pan and sauté the shallots and garlic for 1 minute. 2.Add the red pepper and cooked for 5 minutes, stirring occasionally until softened. Add the rice and make sure that it is well coated. Stir for 1 minute. 3.Add 1 or 2 ladlefuls of hot stock and simmer, stirring, until it has been absorbed, then add another ladleful of stock. 4.Continue adding the stock a little at a time, and simmer until the rice absorbs the liquid before adding more, stirring frequently.5.After 10 minutes, add the diced courgette and tomato.6.After about 8 minutes add the white wine (for adults). When all the stock has been added and the rice is cooked (it will probably take about 20 minutes for the rice to cook through), stir in the Italian hard style cheese until melted and season to taste.',
+ingredients=[courgette]
+)
+db.session.add(courgette_carrot_risotto)
+
+
 # lauren = User(
 # username='Lauren',
 # email='lauren@bell.com',
@@ -140,7 +188,7 @@ db.session.add(chocolate_orange_shortbread)
 # avatar='https://www.whatsappprofiledpimages.com/wp-content/uploads/2018/07/awesome-profile-pics-300x300.jpg'
 # )
 # db.session.add(gessica)
-comment1 = Comment(content='This is a yummy recipe.', recipes=banana_bread, users=lauren)
+comment1 = Comment(content='This is a yummy recipe.', recipes=banana_bread)
 
 # lauren = User(
 # name='Lauren',
