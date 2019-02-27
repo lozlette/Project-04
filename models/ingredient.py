@@ -8,8 +8,13 @@ class Ingredient(db.Model, BaseModel):
     __tablename__ = 'ingredients'
 
     id = db.Column(db.Integer, primary_key=True)
+<<<<<<< HEAD
     name = db.Column(db.String(20), nullable=False)
     image = db.Column(db.String(200), nullable=False)
+=======
+    name = db.Column(db.String(100), nullable=False)
+    image_url = db.Column(db.String(200), nullable=False)
+>>>>>>> development
     nutrition_information = db.Column(db.String(500), nullable=False)
 
 class IngredientSchema(ma.ModelSchema, BaseSchema):
