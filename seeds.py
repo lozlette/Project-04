@@ -108,8 +108,25 @@ ingredients=[pepper]
 )
 db.session.add(spiralized_vegetables_roasted_red_pepper_tomato_pesto)
 
+
+orange = Ingredient(
+name='Orange',
+image_url='https://5.imimg.com/data5/KM/QP/MY-22954806/orange-500x500.jpg',
+nutrition_information=' Potassium 181 mg, Carbohydrate 12 g, Dietary fiber 2.4 g, Sugar 9 g, Protein 0.9 g, Vitamin A 4%, Vitamin C 88%, Calcium 4%, Iron 0%, Vitamin D 0%, Vitamin B-6 5%, Cobalamin 0%, Magnesium 2%')
+
+db.session.add(orange)
+
+chocolate_orange_shortbread = Recipe(
+name='Chocolate Orange Shortbread',
+image_url='https://www.annabelkarmel.com/wp-content/uploads/2017/06/APP-chocolate-orange-shortbread-1-380x315.jpg',
+extra_ingredients='85g caster sugar, 85g semolina or 60g Polenta for a glute-free alternative, 175g plain flour or 175g gluten-free plain flour, 175g cold unsalted butter, cubed, 75g orange & milk chocolate bar, finely chopped',
+method='Preheat the oven to 180⁰C/Gas 4. Line two baking sheets with non stick paper.2.Put the sugar, semolina (or polenta if using), flour & butter into a food processor.3.Whiz together until the mixture looks like breadcrumbs, then whiz a little longer until the dough just comes together.4.Tip out onto a floured surface. Add the chocolate & gently knead until the dough just comes together.5.Roll out & cut into rounds using a 6 cm round cutter. Place on the baking sheets & prick the biscuits with a fork. Bake for about 11 minutes until pale golden.6.Leave to cool, then transfer to a wire rack. Sprinkle with a little extra sugar if you like.',
+ingredients=[orange]
+)
+db.session.add(chocolate_orange_shortbread)
+
 lauren = User(
-name='Lauren',
+username='Lauren',
 email='lauren@bell.com',
 password_hash='password',
 avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic.png'
@@ -117,7 +134,7 @@ avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic
 db.session.add(lauren)
 
 gessica = User(
-name='Gessica',
+username='Gessica',
 email='gessica@mail.com',
 password_hash='password1',
 avatar='https://www.whatsappprofiledpimages.com/wp-content/uploads/2018/07/awesome-profile-pics-300x300.jpg'
