@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify, g
+from flask import Blueprint
 from models.comment import Comment, CommentSchema
 
 api = Blueprint('comments', __name__)
