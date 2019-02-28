@@ -19,9 +19,11 @@ class Recipe(db.Model, BaseModel):
     method = db.Column(db.String(1000), nullable=False)
     ingredients = db.relationship('Ingredient', secondary=ingredients_recipes, backref='recipes')
 
+
 class RecipeSchema(ma.ModelSchema, BaseSchema):
 
-    ingredient = fields.Nested('IngredientSchema', many=True, exclude=('recipes'))
+    ingredients = fields.Nested('IngredientSchema', many=True, exclude=('recipes'))
+    comment = fields.Nested('CommentSchema', many=True, exclude=('recipes'))
 
     class Meta:
         model = Recipe

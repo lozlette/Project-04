@@ -188,7 +188,7 @@ password_hash='password1',
 avatar='https://www.whatsappprofiledpimages.com/wp-content/uploads/2018/07/awesome-profile-pics-300x300.jpg'
 )
 db.session.add(gessica)
-comment1 = Comment(content='This is a yummy recipe.', recipes=banana_carrot_seed_bread)
+comment1 = Comment(content='This is a yummy recipe.', recipe=banana_carrot_seed_bread)
 
 # lauren = User(
 # name='Lauren',
