@@ -21,16 +21,17 @@ class Login extends React.Component{
     this.setState({data})
   }
 
-  handleSubmit(e){
+  handleSubmit(e) {
     e.preventDefault()
-    axios.post('/api/login', this.state.data)
-      .then((res) => {
+    axios
+      .post('/api/login', this.state.data)
+      .then(res => {
         Auth.setToken(res.data.token)
-        // this.props.history.push('/ingredients')
+        this.props.history.push('/')
       })
-
-      .catch(err => alert(err.message))
+      .catch(() => this.setState({errors: 'Invalid credentials'}))
   }
+
 
   render(){
     return(

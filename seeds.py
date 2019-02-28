@@ -181,13 +181,13 @@ db.session.add(courgette_carrot_risotto)
 # )
 # db.session.add(lauren)
 
-gessica = User(
-username='Gessica',
-email='gessica@mail.com',
-password_hash='password1',
-avatar='https://www.whatsappprofiledpimages.com/wp-content/uploads/2018/07/awesome-profile-pics-300x300.jpg'
-)
-db.session.add(gessica)
+# gessica = User(
+# username='Gessica',
+# email='g@mail.com',
+# password_hash='password1',
+# avatar='https://www.whatsappprofiledpimages.com/wp-content/uploads/2018/07/awesome-profile-pics-300x300.jpg'
+# )
+# db.session.add(gessica)
 comment1 = Comment(content='This is a yummy recipe.', recipes=banana_carrot_seed_bread)
 
 # lauren = User(

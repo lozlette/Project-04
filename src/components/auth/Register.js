@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import Auth from '../../lib/Auth'
 
 class Register extends React.Component{
   constructor (){
@@ -10,7 +11,8 @@ class Register extends React.Component{
         username: '',
         email: '',
         password: '',
-        passwordConfirmation: ''
+        password_confirmation: '',
+        avatar: ''
       }
     }
 
@@ -23,14 +25,20 @@ class Register extends React.Component{
     this.setState({data})
   }
 
-  handleSubmit(e){
+
+  handleSubmit(e) {
     e.preventDefault()
-    axios.post('/api/register', this.state.data)
-      .then(() => this.props.history.push('/'))
-      .catch(err => alert(err))
+    axios
+      .post('/api/register', this.state.data)
+      .then( res => {
+        Auth.setToken(res.data.token)
+        this.props.history.push('/login')
+      })
+      .catch(err => this.setState({ errors: err.response.data.error }))
+      .then(() => console.log(this.state))
   }
   render(){
-    const{username,email, password, passwordConfirmation} = this.state.data
+    const{username,email, password, password_confirmation, avatar} = this.state.data
 
     return(
       <main className= "section">
@@ -52,7 +60,7 @@ class Register extends React.Component{
               <label className="label"> Email </label>
               <input
                 name="email"
-                placeholder="email"
+                placeholder="Email"
                 value={email}
                 onChange={this.handleChange}
               />
@@ -63,7 +71,7 @@ class Register extends React.Component{
               <input
                 type="password"
                 name="password"
-                placeholder="password"
+                placeholder="Password"
                 value={password}
                 onChange={this.handleChange}
               />
@@ -73,12 +81,24 @@ class Register extends React.Component{
               <label className="label"> Password Confirmation </label>
               <input
                 type="password"
-                name="passwordConfirmation"
-                placeholder="passwordConfirmation"
-                value={passwordConfirmation}
+                name="password_confirmation"
+                placeholder="Password Confirmation"
+                value={password_confirmation}
                 onChange={this.handleChange}
               />
             </div>
+
+            <div className="field">
+              <label className="label"> Image </label>
+              <input
+                type="avatar"
+                name="avatar"
+                placeholder="Image"
+                value={avatar}
+                onChange={this.handleChange}
+              />
+            </div>
+
             <button className='button is-primary'>Submit</button>
           </form>
         </div>
