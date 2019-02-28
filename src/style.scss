@@ -1,12 +1,15 @@
-
-
-
-
-
 .column {
   height: 300px;
 }
-
+.user-page{
+  display: flex;
+  justify-content: center;
+}
+.user-p{
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  font-weight: bold;
+}
 .text {
  color: black;
  font-weight: 200px;

@@ -154,7 +154,7 @@ name='Avocado & Banana Puree',
 image='https://www.annabelkarmel.com/wp-content/uploads/2008/06/avocado-banana-puree-3-380x315.jpg',
 extra_ingredients='1/4 avocado, 1/2 smal ripe banana, 1 or 2 tbsp baby\'s usual milk or greek yoghurt',
 method='1.Mash the avocado together with the banana and the milk.2.You can also substitute the flesh of half a small papaya for the avocado. If using papaya, the milk is then optional.',
-ingredients=[avocado]
+ingredients=[avocado, banana]
 )
 db.session.add(avocado_banana_puree)
 
@@ -170,7 +170,7 @@ name='Courgette & Carrot Risotto',
 image='https://www.annabelkarmel.com/wp-content/uploads/2009/05/Summer-Risotto-3-380x315.jpg',
 extra_ingredients='900 ml vegetable stock or chicken stock, 4 large shallots or one onion, finely chopped, 1 garlic clove, crushed, 40 g butter, 1 tbsp olive oil, 40 g red pepper, chopped, 200 g arborio (risotto) rice, 75 g courgette, diced, 2 medium tomatoes, skinned, de-seeded & chopped (approx. 225 g), 4 tbsp white wine (for adult version), 40 g Italian hard style cheese, grated',
 method='1.Bring the stock to the boil and allow to simmer. Heat the oil and butter in a large frying pan and sauté the shallots and garlic for 1 minute. 2.Add the red pepper and cooked for 5 minutes, stirring occasionally until softened. Add the rice and make sure that it is well coated. Stir for 1 minute. 3.Add 1 or 2 ladlefuls of hot stock and simmer, stirring, until it has been absorbed, then add another ladleful of stock. 4.Continue adding the stock a little at a time, and simmer until the rice absorbs the liquid before adding more, stirring frequently.5.After 10 minutes, add the diced courgette and tomato.6.After about 8 minutes add the white wine (for adults). When all the stock has been added and the rice is cooked (it will probably take about 20 minutes for the rice to cook through), stir in the Italian hard style cheese until melted and season to taste.',
-ingredients=[courgette]
+ingredients=[courgette, carrot]
 )
 db.session.add(courgette_carrot_risotto)
 
