@@ -18,27 +18,37 @@ class UserShow extends React.Component {
   render() {
     if(!this.state.users) return <h1>Loading...</h1>
     console.log(this.state.users)
-    const { username, email, avatar } = this.state.users
+    const { username, email, avatar} = this.state.users
     return (
-
       <div>
-        <div className="card">
-          <hr/>
-          <div className="card-header">
-            <h1 className="card-header-title">{username}</h1>
+        <section className="hero is-success is-small">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title has-text-centered">
+                {username}:
+              </h1>
+            </div>
           </div>
-
-          <div className="card-image">
-            <figure className="image is-128x128">
-              <img className="is-rounded" src={avatar} alt={username}/>
-            </figure>
+        </section>
+        <div className="container has-content-centered">
+          <div className="column user-page">
+            <div className="card-image is-centered">
+              <figure className="image is-200x200">
+                <img className="is-rounded" src={avatar} alt={username}/>
+              </figure>
+            </div>
           </div>
         </div>
 
-        <div className="card-content">
-          <div className="content">
-            <p><strong>Email:</strong>{email}</p>
+        <div className="container has-text-centered">
+          <div className="column is-4 is-offset-4">
+            <div className="card-content is-centered">
+              <div className="content">
+                <p className="user-p"><strong>Email:</strong>{email}</p>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     )
