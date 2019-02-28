@@ -183,7 +183,7 @@ db.session.add(courgette_carrot_risotto)
 
 gessica = User(
 username='Gessica',
-email='gessica@mail.com',
+email='g@mail.com',
 password_hash='password1',
 avatar='https://www.whatsappprofiledpimages.com/wp-content/uploads/2018/07/awesome-profile-pics-300x300.jpg'
 )
