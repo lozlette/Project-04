@@ -9,7 +9,9 @@ class RecipesShow extends React.Component {
   constructor() {
     super()
 
-    this.state = {}
+    this.state = {
+      
+    }
 
   }
 

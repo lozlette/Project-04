@@ -2,13 +2,15 @@ import React from 'react'
 import 'bulma'
 import axios from 'axios'
 import IngredientsCard from './IngredientsCard'
+import Auth from '../../lib/Auth'
 // import { Link } from 'react-router-dom'
 const choices = []
 class IngredientsIndex extends React.Component {
   constructor() {
     super()
 
-    this.state = {}
+    this.state = {
+    }
     this.handleClick = this.handleClick.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -16,18 +18,42 @@ class IngredientsIndex extends React.Component {
   componentDidMount(){
     axios.get('/api/ingredients')
       .then(res => this.setState({ ingredients: res.data }))
+
+    axios.get('/api/recipes',
+      {headers: { Authorization: `Bearer ${Auth.getToken()}` }})
+      .then(res => this.setState({ recipes: res.data }))
   }
 
   handleClick(e){
-    choices.push(e.target.id)
-    console.log(choices)
+    choices.push(parseInt(e.target.id))
+    console.log('CHOICE', choices)
+    console.log('STATE', this.state)
   }
 
   handleSubmit(){
-    if (parseInt(choices[0]) === this.state.ingredients[0].id && parseInt(choices[1]) === this.state.ingredients[1].id)
-      this.props.history.push('/recipes/1')
-    else this.props.history.push('/ingredients')
-    console.log(this.state.ingredients)
+    const resultRecipes = this.state.recipes.filter( recipe => {
+      let recipeToReturn = true
+      choices.map(choice => {
+        recipe.ingredients.map(ingredient => {
+          if(ingredient.id === choice) choiceInRecipe =True
+        })
+
+      })
+      return recipeToReturn
+    })
+    console.log(resultRecipes)
+
+
+
+    // let variable = this.state.ingredients.map(ingredient => variable = ingredient.id )
+    // const filtered = this.state.recipes.filter(recipe => recipe.ingredients[`${variable}`].id === parseInt(choices[0]) && parseInt(choices[1]))
+    // console.log(filtered)
+
+
+    // if (parseInt(choices[0]) === this.state.ingredients[0].id && parseInt(choices[1]) === this.state.ingredients[1].id)
+    //   this.props.history.push('/recipes/1')
+    // else this.props.history.push('/ingredients')
+    // console.log(this.state.ingredients)
   }
 
 

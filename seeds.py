@@ -14,21 +14,23 @@ image='https://i5.walmartimages.ca/images/Enlarge/580/6_r/875806_R.jpg',
 nutrition_information='Vitamin B6 - 0.5 mg, Manganese - 0.3 mg, Vitamin C - 9 mg, Potassium - 450 mg, Dietary Fiber - 3g, Protein - 1 g, Magnesium - 34 mg, Folate - 25.0 mcg.')
 db.session.add(banana)
 
-banana_carrot_seed_bread = Recipe(
-name='BLW Banana, Carrot and Seed Bread',
-image='https://www.annabelkarmel.com/wp-content/uploads/2017/05/412243735Loaf_Work-e1493997814752-380x315.jpg',
-extra_ingredients='150g / 5oz softened unsalted butter, 2 large eggs, 200g/ 7oz ripe bananas, peeled and mashed, 125g / 4½oz grated carrot, 25g / 1oz sultanas, 125g / 4½oz soft dark brown sugar, 225g / 8oz self-raising flour, ½ teaspoon ground cinnamon, 1 teaspoon mixed spice, 1 teaspoon ground ginger, 25g / 1oz pumpkin seeds, 25g / 1oz sunflower seeds, Butter, for spreading and greasing',
-method='1.Preheat the oven to 170°C/340°F/Gas 3, grease a 900 g/2 lb loaf tin and line it with baking parchment.2.Place all of the ingredients, except the topping, in a large mixing bowl. Whisk together with an electric hand-held whisk for 1–2 minutes until light and fluffy. Alternatively, use a stand mixer fitted with the paddle or whisk attachment. 3.Spoon the mixture into the tin and level out the top. 4.Sprinkle with the extra seeds and bake for 1–1¼ hours until golden, well risen and a skewer inserted comes out clean. 5.Remove from the oven and leave to cool on a wire rack, then remove from the tin. Dust with icing sugar (if using), cut into slices, spread with butter and serve.',
-ingredients=[banana]
-)
-db.session.add(banana_carrot_seed_bread)
-
-
 carrot = Ingredient(
 name='Carrot',
 image='http://cdn.shopify.com/s/files/1/1380/2059/products/Carrot-Orange_grande.jpg?v=1480318421',
 nutrition_information='Fiber: 2.8 g, Fat: 0.2 g, Calories: 41, Trans fat: ~')
 db.session.add(carrot)
+
+
+banana_carrot_seed_bread = Recipe(
+name='BLW Banana, Carrot and Seed Bread',
+image='https://www.annabelkarmel.com/wp-content/uploads/2017/05/412243735Loaf_Work-e1493997814752-380x315.jpg',
+extra_ingredients='150g / 5oz softened unsalted butter, 2 large eggs, 200g/ 7oz ripe bananas, peeled and mashed, 125g / 4½oz grated carrot, 25g / 1oz sultanas, 125g / 4½oz soft dark brown sugar, 225g / 8oz self-raising flour, ½ teaspoon ground cinnamon, 1 teaspoon mixed spice, 1 teaspoon ground ginger, 25g / 1oz pumpkin seeds, 25g / 1oz sunflower seeds, Butter, for spreading and greasing',
+method='1.Preheat the oven to 170°C/340°F/Gas 3, grease a 900 g/2 lb loaf tin and line it with baking parchment.2.Place all of the ingredients, except the topping, in a large mixing bowl. Whisk together with an electric hand-held whisk for 1–2 minutes until light and fluffy. Alternatively, use a stand mixer fitted with the paddle or whisk attachment. 3.Spoon the mixture into the tin and level out the top. 4.Sprinkle with the extra seeds and bake for 1–1¼ hours until golden, well risen and a skewer inserted comes out clean. 5.Remove from the oven and leave to cool on a wire rack, then remove from the tin. Dust with icing sugar (if using), cut into slices, spread with butter and serve.',
+ingredients=[banana, carrot]
+)
+db.session.add(banana_carrot_seed_bread)
+
+
 
 carrot_cheese_muffins = Recipe(
 name='Carrot & Cheese Muffins',
