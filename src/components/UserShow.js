@@ -1,21 +1,32 @@
-// import React from 'react'
-// import axios from 'axios'
-// import Auth from '../../lib/Auth'
-//
-// import { Link } from 'react-router-dom'
-//
-// class UserShow extends React.Component {
-//   constructor(){
-//     super()
-//
-//     this.state = {}
-//   }
-//
-//
-//   userRequest(){
-//     axios.get(`/api/user/${this.props.match.params.id}`)
-//       .then(res => this.setState({ user: res.data }))
-//   }
-// }
-//
-// export default UserShow
+import React from 'react'
+import axios from 'axios'
+
+
+class UserShow extends React.Component {
+  constructor() {
+    super()
+
+    this.state = {}
+
+  }
+
+  componentDidMount(){
+    axios.get('/api/users')
+      .then(res => this.setState({ users: res.data }))
+  }
+  render() {
+    if(!this.state.users) return <h1>Loading...</h1>
+    console.log(this.state.users)
+    return (
+      <div className="isImage">
+        <figure className="image is-4by3">
+          <img src={this.state.users.avatar} alt={this.state.users.username} />
+          <div className="middle">
+            <div className="text">{this.state.users.username}</div>
+          </div>
+        </figure>
+      </div>
+    )
+  }
+}
+export default UserShow
