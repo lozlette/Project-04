@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bulma'
 import axios from 'axios'
+import Auth from '../../lib/Auth'
 // import CommentsForm from '/CommentsForm'
 
 
@@ -13,11 +14,13 @@ class RecipesShow extends React.Component {
   }
 
   componentDidMount(){
-    axios.get(`/api/recipes/${this.props.match.params.id}`)
+    axios.get(`/api/recipes/${this.props.match.params.id}`,
+      {headers: { Authorization: `Bearer ${Auth.getToken()}` }} )
       .then(res => this.setState({ recipes: res.data }))
   }
 
   render(){
+    console.log(this.state)
     if(!this.state.recipes) return <h1>Loading...</h1>
     console.log(this.state.recipes)
     const { image, name } = this.state.recipes
@@ -33,7 +36,6 @@ class RecipesShow extends React.Component {
               </article>
               <article className="tile is-child box notification is-success">
                 <p className="title is-success">Nutrition of ingredient 1</p>
-                <p className="subtitle"></p>
               </article>
             </div>
             <div className="tile is-parent box">

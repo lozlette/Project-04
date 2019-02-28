@@ -1,11 +1,11 @@
 import React from 'react'
 
-const IngredientsCard = ({ name, image }) => {
+const IngredientsCard = ({ name, image, id }) => {
   return (
 
     <div className="isImage">
       <figure className="image">
-        <img src={image} alt={name} />
+        <img src={image} alt={name} id={id}/>
       </figure>
     </div>
   )

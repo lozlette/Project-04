@@ -21,7 +21,7 @@ class CommentsForm extends React.Component{
     this.setState({ commentData })
   }
 
-  handleSubmitPost(e){
+  handleSubmitComment(e){
     e.preventDefault()
     axios
       .post(`/api/recipes/${this.props.recipe.id}/posts`, this.state.commentData,
