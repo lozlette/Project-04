@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Home from './components/common/Home'
+import Navbar from './components/common/Navbar'
 import IngredientsIndex from './components/Ingredients/IngredientsIndex'
+import RecipesShow from './components/Recipes/RecipesShow'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
@@ -19,7 +21,10 @@ class App extends React.Component{
       <div>
         <BrowserRouter>
           <main>
+
+            <Navbar />
             <Switch>
+              <Route path="/recipes/:id" component={RecipesShow} />
               <Route path="/ingredients" component={IngredientsIndex} />
               <Route path="/users" component={UserShow} />
               <Route path="/register" component={Register} />
