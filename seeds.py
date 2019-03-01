@@ -111,6 +111,13 @@ ingredients=[pepper]
 db.session.add(spiralized_vegetables_roasted_red_pepper_tomato_pesto)
 
 
+chocolate = Ingredient(
+name='chocolate',
+image='https://i.ndtvimg.com/i/2018-03/chocolate_620x350_51520598238.jpg',
+nutrition_information='Total Fat 31 g,Saturated fat 19 g, Polyunsaturated fat 1.1 g, Monounsaturated fat 10 g, Trans fat 0.1 g, Cholesterol 8 mg, Sodium 24 mg, Potassium 559 mg, Carbohydrate 61 g, Dietary fiber 7 g, Sugar 48 g, Protein 4.9 g, Caffeine 43 mg, Vitamin A 1%, Vitamin C 0%, Calcium 5%, Iron 44%, Vitamin D 0%, Vitamin B-6 0%, Cobalamin 3%, Magnesium 36%')
+db.session.add(chocolate)
+
+
 orange = Ingredient(
 name='Orange',
 image='https://5.imimg.com/data5/KM/QP/MY-22954806/orange-500x500.jpg',
@@ -123,9 +130,17 @@ name='Chocolate Orange Shortbread',
 image='https://www.annabelkarmel.com/wp-content/uploads/2017/06/APP-chocolate-orange-shortbread-1-380x315.jpg',
 extra_ingredients='85g caster sugar, 85g semolina or 60g Polenta for a glute-free alternative, 175g plain flour or 175g gluten-free plain flour, 175g cold unsalted butter, cubed, 75g orange & milk chocolate bar, finely chopped',
 method='Preheat the oven to 180⁰C/Gas 4. Line two baking sheets with non stick paper.2.Put the sugar, semolina (or polenta if using), flour & butter into a food processor.3.Whiz together until the mixture looks like breadcrumbs, then whiz a little longer until the dough just comes together.4.Tip out onto a floured surface. Add the chocolate & gently knead until the dough just comes together.5.Roll out & cut into rounds using a 6 cm round cutter. Place on the baking sheets & prick the biscuits with a fork. Bake for about 11 minutes until pale golden.6.Leave to cool, then transfer to a wire rack. Sprinkle with a little extra sugar if you like.',
-ingredients=[orange]
+ingredients=[orange,chocolate]
 )
 db.session.add(chocolate_orange_shortbread)
+
+
+tomatoes = Ingredient(
+name='tomatoes',
+image='https://foodsogoodmall.com/wp-content/uploads/2015/02/sliced_tomatoes-624.jpg',
+nutrition_information='Calories 18, Water 95 %, Protein 0.9 g, Carbs 3.9 g, Sugar 2.6 g, Fiber 1.2 g, Fat 0.2 g, Saturated 0.03 g, Monounsaturated 0.03 g, Polyunsaturated 0.08 g, Omega-6 0.08 g')
+db.session.add(tomatoes)
+
 
 cod = Ingredient(
 name='Cod',
@@ -173,6 +188,81 @@ method='1.Bring the stock to the boil and allow to simmer. Heat the oil and butt
 ingredients=[courgette, carrot]
 )
 db.session.add(courgette_carrot_risotto)
+
+
+pancake = Ingredient(
+name='Pancake',
+image='http://visitlawrencecounty.com/wp-content/uploads/2018/10/pancakes.jpg',
+nutrition_information='Total Fat 3.9g , Saturated Fat 0.8g , Polyunsaturated Fat 1.8g, Monounsaturated Fat 1g, Cholesterol 24mg, Sodium 176mg, Potassium 53mg, Total Carbohydrates 11g, Protein 2.6g grams, Vitamin A 1.6%, Vitamin C 0.2% , Calcium 6.7% , Iron 4% ')
+db.session.add(pancake)
+
+blueberries = Ingredient(
+name='blueberries',
+image='https://i5.walmartimages.ca/images/Large/250/8_r/6000196012508_R.jpg',
+nutrition_information='3.6 g dietary fiber, or 14.4 percent of your daily value (DV), 9 milligrams (mg) calcium, 0.9 percent DV., 9 mg magnesium, 2.25 percent DV., 114 mg potassium, 2.42 percent DV., 14.4 mg vitamin C, 24 percent DV., 9 micrograms (mcg) folate, 2.25 percent DV.')
+db.session.add(blueberries)
+
+blueberry_pancakes = Recipe(
+name='American Style Blueberry Pancakes',
+image='https://www.annabelkarmel.com/wp-content/uploads/2010/02/Blueberry-pancakes-3-380x315.jpg',
+extra_ingredients='150 g plain flour, 2 tbsp granulated sugar, 1 tsp baking powder, 1/2 tsp bicarbonate of soda, 1 large pinch of salt, 250 ml buttermilk or 120 g plain yoghurt plus, 120 ml milk, 1 egg, 1/4 tsp vanilla extract, 200 g blueberries, sunflower oil for greasing, 2 tbsp maple syrup',
+method='1.Put the flour, sugar, bicarbonate of soda, baking powder and salt in a bowl. Add half the buttermilk, the egg and vanilla extract. 2.Whisk everything together to make a batter. Add the remaining buttermilk and whisk until smooth. 3.Add the blueberries and mix them into the batter gently. Try not to squash them. 4.Lightly oil and heat a non-stick frying pan. Drop in 2 tbsp batter per pancake. Cook for 1 ½ – 2 minutes, until golden underneath and bubbling on top. 5.Flip over and cook for a further 1 to 2 minutes. Serve with maple syrup.',
+ingredients=[pancake, blueberries]
+)
+db.session.add(blueberry_pancakes)
+
+
+blueberry_pear_banana_puree = Recipe(
+name='Blueberry, Pear & Banana Puree',
+image='https://www.annabelkarmel.com/wp-content/uploads/2014/06/Blueberry-Pear-and-Banana-Puree-3-380x315.jpg',
+extra_ingredients='2 pears, peeled & diced, 150 g bluberries, 1 banana, sliced',
+method='1.Put the pears and blueberries into a saucepan. Simmer for 5 minutes until soft. 2.Add the banana and blend until smooth or to your desired consistency.',
+ingredients=[banana, blueberries]
+)
+db.session.add(blueberry_pear_banana_puree)
+
+
+chocolate_chip_kale_cookies = Recipe(
+name='Chocolate Chip Kale Cookies',
+image='https://chocolatecoveredkatie.com/wp-content/uploads/2016/12/kale-cookies-recipe.png',
+extra_ingredients='1 cup spelt, white, or oat flour, loosely packed (125g), 1/2 tsp baking soda,1/4 tsp salt, 1/2 cup unrefined sugar or xylitol,1/3 cup chocolate chips, 2 tbsp milk of choice, 2 tbsp oil (24g), 1/4 tsp pure vanilla extract, 1 cup raw kale or spinach, no stems',
+method='1 Preheat oven to 325 F. 2.Process kale or dice it extremely fine. 3. Combine all dry ingredients except kale in a medium bowl, then stir in remaining ingredients to form a dough. It will be dry at first, so keep stirring until a cookie-dough texture is achieved. (Add 1 additional tbsp milk of choice only if needed – I didn’t need it.) 4.Roll into balls. 5.Place on a cookie tray, and bake 11 minutes. 6.They will look underdone. 7.Remove from the oven anyway, and let them cool 10 minutes, during which time they will firm up. You can also make extra cookie dough balls and freeze them to bake at a later date.',
+ingredients=[chocolate, kale]
+)
+db.session.add(chocolate_chip_kale_cookies)
+
+
+cod_tomato_sauce = Recipe(
+name='Cod with Hearty Tomato Sauce',
+image='https://chocolatecoveredkatie.com/wp-content/uploads/2016/12/kale-cookies-recipe.png',
+extra_ingredients='2 cans (14-1/2 ounces each) diced tomatoes with basil, oregano and garlic, undrained, 4 cod fillets (6 ounces each), 2 tablespoons olive oil, divided, 2 medium onions, halved and thinly sliced (about 1-1/2 cups), 1/2 teaspoon dried oregano, 1/4 teaspoon pepper, 1/4 teaspoon crushed red pepper flakes, Hot cooked whole wheat pasta, Minced fresh parsley, optional',
+method='1.Place tomatoes in a blender. Cover and process until pureed. 2.Pat fish dry with paper towels. In a large skillet, heat 1 tablespoon oil over medium-high heat. Add cod fillets; cook until surface of fish begins to color, 2-4 minutes on each side. Remove from pan. 3.In same skillet, heat remaining oil over medium-high heat. Add onions; cook and stir until tender, 2-4 minutes. Stir in seasonings and pureed tomatoes; bring to a boil. Add cod; return just to a boil, spooning sauce over tops. Reduce heat; simmer, uncovered, until fish just begins to flake easily with a fork, 5-7 minutes. Serve with pasta. If desired, sprinkle with parsley.',
+ingredients=[cod, tomatoes]
+)
+db.session.add(cod_tomato_sauce)
+
+
+muffins = Ingredient(
+name='muffins',
+image='https://kep.index.hu/1/0/1936/19368/193689/19368932_eb5ecf81f3d7edf9be3c6feaad135c76_wm.jpg',
+nutrition_information='Total Fat 16 g, Saturated fat 2.7 g, Polyunsaturated fat 7 g, Monounsaturated fat 6 g, Trans fat 0.3 g, Cholesterol 30 mg, Sodium 339 mg, Potassium 115 mg, Carbohydrate 54 g, Dietary fiber 1 g ,Sugar 33 g, Protein 4.5 g, Vitamin A 1%, Vitamin C 1%, Calcium 4%, Iron 7%, Vitamin D 1% , Cobalamin 3%, Magnesium 2%')
+db.session.add(muffins)
+
+sweet_potato = Ingredient(
+name='sweet potato',
+image='https://d2lhw32459hxui.cloudfront.net/files/uploads/drupal/uploads/2012/10/nksweetpotato.jpg',
+nutrition_information='Sodium 55 mg, Potassium 337 mg, Carbohydrate 20 g, Dietary fiber 3 g, Sugar 4.2 g, Protein 1.6 g, Vitamin A 283%, Vitamin C 4%, Calcium 3%, Iron 3%, Vitamin B-6 10%, Magnesium 6%')
+db.session.add(sweet_potato)
+
+sweet_potato_muffins = Recipe(
+name='Sweet Potato Muffins',
+image='https://www.goodinthesimple.com/wp-content/uploads/2018/01/sweet-potato-muffins-in-basket-683x1024.jpg',
+extra_ingredients='3 cups of mashed sweet potato, 2 cups flour, 2 tsp cinnamon, 1 tsp baking soda, 1/4 tsp baking powder, 1/2 tsp salt, 1 cup sugar, 3/4 cup vegetable oil, 3 large eggs, 1 tsp vanilla, 1/2 cup ground flaxseed meal optional',
+method='1.Put the pears and blueberries into a saucepan. Simmer for 5 minutes until soft. 2.Add the banana and blend until smooth or to your desired consistency.',
+ingredients=[muffins, sweet_potato]
+)
+db.session.add(sweet_potato_muffins)
+
 
 #
 # lauren = User(
