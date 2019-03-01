@@ -3,10 +3,11 @@ import React from 'react'
 const IngredientsCard = ({ name, image, id }) => {
   return (
 
-    <div className="isImage">
-      <figure className="image">
-        <img src={image} alt={name} id={id}/>
-      </figure>
+    <div
+      className="image"
+      style={{ backgroundImage: `url(${image})` }}
+      id={id}
+    ><span>{name}</span>
     </div>
   )
 }

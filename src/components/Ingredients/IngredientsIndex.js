@@ -67,11 +67,11 @@ class IngredientsIndex extends React.Component {
         <div className="columns is-multiline">
           {this.state.ingredients.map(ingredient =>
             <div className="column is-one-quarter" key={ingredient.id}>
-              <button onClick={this.handleClick}><IngredientsCard {...ingredient}/></button>
+              <button onClick={this.handleClick} className="ingredientBtn"><IngredientsCard {...ingredient}/></button>
             </div>
           )}
         </div>
-        <button className="button ingredientbtn" onClick={this.handleSubmit}>Submit</button>
+        <button className="button submitingbtn is-fullwidth is-success" onClick={this.handleSubmit}>Submit</button>
       </div>
     )
   }

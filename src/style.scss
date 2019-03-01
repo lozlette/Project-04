@@ -15,19 +15,29 @@
  font-weight: 200px;
 }
 
+.ingredientBtn {
+  width: 100%;
+  height:15rem;
+  padding: 3%;
+}
 
-.isImage {
+.image {
+  display:flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  max-height: 300px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
-  background: rgba(0,0,0,0.8);
-  border-radius: 10px;
-  margin: 10px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
   transition: all .2s ease-in-out;
-  .image img{
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+
+  span {
+    display: none;
   }
   &:hover {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.3);
@@ -53,21 +63,24 @@
   font-size: 20px;
 }
 
-.isImage{
-  display:flex;
-  align-items: center;
-  justify-content: center;
+.submitingbtn {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 35px;
 }
-
-.image {
-  height:300px;
-  width:300px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-.ingredientbtn {
-  border: none;
-  background: none;
-
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
 }
