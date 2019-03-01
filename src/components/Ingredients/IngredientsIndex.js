@@ -3,6 +3,7 @@ import 'bulma'
 import axios from 'axios'
 import IngredientsCard from './IngredientsCard'
 import Auth from '../../lib/Auth'
+import _ from 'lodash'
 
 class IngredientsIndex extends React.Component {
   constructor() {
@@ -32,19 +33,11 @@ class IngredientsIndex extends React.Component {
 
   handleSubmit(){
     const resultRecipes = this.state.recipes.filter(recipe => {
-      //filter recipes to leave only
-      const recipeIngredients = recipe.ingredients
-
-      const filteredIngredients = Array.from(Object.values(recipeIngredients[0]))
-      //filtered ingredients- filtered to leave only those that equal choices [0] or [1]
-      filteredIngredients.filter(recipeIngredient => {
-        recipeIngredient === this.state.choices[0] || recipeIngredient === this.state.choices[1]
-      })
-      console.log('recipeIngredients', recipeIngredients)
-      console.log('filtered ingredients',filteredIngredients)
-      return resultRecipes
+      const ingredientIds = recipe.ingredients.map(ingredient => ingredient.id)
+      return _.intersection(ingredientIds, this.state.choices).length === 2
     })
-    console.log('resultRecipes', resultRecipes)
+    this.props.history.push(`/recipes/${resultRecipes[0].id}`)
+    console.log(resultRecipes)
   }
 
   render(){

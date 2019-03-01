@@ -22,8 +22,8 @@ class Recipe(db.Model, BaseModel):
 
 class RecipeSchema(ma.ModelSchema, BaseSchema):
 
-    ingredients = fields.Nested('IngredientSchema', many=True, exclude=('recipes'))
-    comment = fields.Nested('CommentSchema', many=True, exclude=('recipes'))
+    ingredients = fields.Nested('IngredientSchema', many=True, exclude=('recipes',))
+    comments = fields.Nested('CommentSchema', many=True, exclude=('recipe',))
 
     class Meta:
         model = Recipe

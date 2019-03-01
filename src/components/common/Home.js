@@ -11,7 +11,7 @@ class Home extends React.Component {
   render(){
     return(
       <div>
-        <section className="hero is-success is-small">
+        <section className="hero is-small is-success">
           <div className="hero-body">
             <div className="container">
               <h1 className="title">
@@ -22,9 +22,9 @@ class Home extends React.Component {
               </h2>
             </div>
           </div>
-        </section>
-        <section>
-
+          <div className="imagecontainer">
+          </div>
+          <button className="button homebtn is-success">Choose your Ingredients</button>
         </section>
       </div>
     )

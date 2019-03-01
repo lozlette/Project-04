@@ -1,6 +1,48 @@
-// .column {
-//   height: 300px;
-// }
+@charset 'utf-8';
+
+$maincolor: #d9ffcc;
+
+$navbar-background-color: $maincolor;
+$navbar-item-hover-background-color: darken($maincolor, 10%);
+$hero-background-color: $maincolor;
+
+
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/container.sass";
+@import "~bulma/sass/elements/form.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/components/card.sass";
+@import "~bulma/sass/grid/_all.sass";
+@import "~bulma/sass/layout/section.sass";
+
+.hero {
+background-color: $maincolor;
+  .title, .subtitle {
+    color: #FFFFFF;
+  }
+}
+.navbar-item {
+  color: #FFFFFF;
+}
+ //HOMEPAGE----------------------------------------------------
+.imagecontainer {
+  height: 92vh;
+  max-width: 100%;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url('https://cdn.closeronline.co.uk/one/media/5ac7/9768/4307/0b51/94af/ea20/can-fruit-veg-fight-illness.jpg?quality=50&width=960&ratio=16-9&resizeStyle=aspectfill&format=jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homebtn {
+  font-family: 'Amatic SC', cursive;
+  font-size: 35px;
+  font-weight: bold;
+}
+//-----------------------------------------------------------
+
 .user-page{
   display: flex;
   justify-content: center;
@@ -70,4 +112,13 @@
   border: none;
   background: none;
 
+}
+
+.tile {
+  margin-top: 10px;
+}
+.maintile {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }

@@ -15,7 +15,7 @@ class Comment(db.Model, BaseModel):
 
 class CommentSchema(ma.ModelSchema, BaseSchema):
 
-    recipe = fields.Nested('RecipeSchema')
+    recipe = fields.Nested('RecipeSchema', exclude=('comments', ))
 
     class Meta:
         model = Comment
