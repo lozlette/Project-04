@@ -1,5 +1,6 @@
-from flask import Blueprint
+from flask import Blueprint, request, jsonify, g
 from models.comment import Comment, CommentSchema
+from lib.secure_route import secure_route
 
 api = Blueprint('comments', __name__)
 

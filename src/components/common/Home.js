@@ -1,5 +1,6 @@
 import React from 'react'
 import 'bulma'
+import { Link } from 'react-router-dom'
 
 class Home extends React.Component {
   constructor() {
@@ -24,7 +25,9 @@ class Home extends React.Component {
           </div>
           <div className="imagecontainer">
           </div>
-          <button className="button homebtn is-success">Choose your Ingredients</button>
+          <Link to={'/ingredients'}>
+            <button className="button homebtn is-success">Choose your Ingredients</button>
+          </Link>
         </section>
       </div>
     )
