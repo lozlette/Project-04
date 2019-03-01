@@ -10,20 +10,20 @@ with app.app_context():
 
 banana = Ingredient(
 name='Banana',
-image='https://i5.walmartimages.ca/images/Enlarge/580/6_r/875806_R.jpg',
+image='https://images.pexels.com/photos/461208/pexels-photo-461208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 nutrition_information='Vitamin B6 - 0.5 mg, Manganese - 0.3 mg, Vitamin C - 9 mg, Potassium - 450 mg, Dietary Fiber - 3g, Protein - 1 g, Magnesium - 34 mg, Folate - 25.0 mcg.')
 db.session.add(banana)
 
 carrot = Ingredient(
 name='Carrot',
-image='http://cdn.shopify.com/s/files/1/1380/2059/products/Carrot-Orange_grande.jpg?v=1480318421',
+image='https://images.pexels.com/photos/143133/pexels-photo-143133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 nutrition_information='Fiber: 2.8 g, Fat: 0.2 g, Calories: 41, Trans fat: ~')
 db.session.add(carrot)
 
 
 banana_carrot_seed_bread = Recipe(
 name='BLW Banana, Carrot and Seed Bread',
-image='https://www.annabelkarmel.com/wp-content/uploads/2017/05/412243735Loaf_Work-e1493997814752-380x315.jpg',
+image='https://images.unsplash.com/photo-1522184216316-3c25379f9760?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
 extra_ingredients='150g / 5oz softened unsalted butter, 2 large eggs, 200g/ 7oz ripe bananas, peeled and mashed, 125g / 4½oz grated carrot, 25g / 1oz sultanas, 125g / 4½oz soft dark brown sugar, 225g / 8oz self-raising flour, ½ teaspoon ground cinnamon, 1 teaspoon mixed spice, 1 teaspoon ground ginger, 25g / 1oz pumpkin seeds, 25g / 1oz sunflower seeds, Butter, for spreading and greasing',
 method='1.Preheat the oven to 170°C/340°F/Gas 3, grease a 900 g/2 lb loaf tin and line it with baking parchment.2.Place all of the ingredients, except the topping, in a large mixing bowl. Whisk together with an electric hand-held whisk for 1–2 minutes until light and fluffy. Alternatively, use a stand mixer fitted with the paddle or whisk attachment. 3.Spoon the mixture into the tin and level out the top. 4.Sprinkle with the extra seeds and bake for 1–1¼ hours until golden, well risen and a skewer inserted comes out clean. 5.Remove from the oven and leave to cool on a wire rack, then remove from the tin. Dust with icing sugar (if using), cut into slices, spread with butter and serve.',
 ingredients=[banana, carrot]
@@ -45,7 +45,7 @@ db.session.add(carrot_cheese_muffins)
 
 spinach = Ingredient(
 name='Spinach',
-image='https://ats.org/wp-content/uploads/2016/09/spinach-leaves-1461774375kTU-700x466.jpg',
+image='https://images.pexels.com/photos/1751149/pexels-photo-1751149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 nutrition_information='Protein 2.9 g, Carbs 3.6 g, Sugar 0.4 g, Fiber 2.2 g, Fat 0.4 g, Saturated 0.06 g, Monounsaturated 0.01 g, Polyunsaturated 0.17 g, Omega-3 0.14 g ,Omega-6 0.03 g, Trans fat ~')
 
 db.session.add(spinach)
@@ -62,7 +62,7 @@ db.session.add(salmon_broccoli_spinach_puree)
 
 kale = Ingredient(
 name='Kale',
-image='https://cdn1.medicalnewstoday.com/content/images/articles/270/270435/dinosaur-kale.jpg',
+image='https://as2.ftcdn.net/jpg/00/64/38/81/500_F_64388152_C75t3QRNZmxQPs3R5sXIdGNEFXNWX8pZ.jpg',
 nutrition_information=' 3 grams of protein, 2.5 grams of fiber, Vitamins A, C, and K, Folate, B vitamin, Alpha-linolenic acid, omega-3 fatty acid.')
 
 db.session.add(kale)
@@ -79,7 +79,7 @@ db.session.add(sweet_potato_kale_croquettes)
 
 apple = Ingredient(
 name='Apple',
-image='https://5.imimg.com/data5/YY/EN/MY-8155364/fresh-apple-500x500.jpg',
+image='https://images.unsplash.com/photo-1501925654609-7b41cf395eb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
 nutrition_information=' Protein 0.3 g,Carbs 13.8 g, Sugar 10.4 g, Fiber 2.4 g, Fat 0.2 g, Saturated 0.03 g, Monounsaturated 0.01 g, Polyunsaturated 0.05 g, Omega-3 0.01 g, Omega-6 0.04 g, Trans fat 0 g')
 
 db.session.add(apple)
@@ -96,7 +96,7 @@ db.session.add(butternut_squash_apple_prune)
 
 pepper = Ingredient(
 name='Pepper',
-image='https://target.scene7.com/is/image/Target/GUEST_7c2f5da1-86b0-41c7-83a5-a21359f82e6e?wid=488&hei=488&fmt=pjpeg',
+image='https://images.unsplash.com/photo-1509377244-b9820f59c12f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80',
 nutrition_information=' Potassium 340 mg, Carbohydrate 9 g, Dietary fiber 1.5 g, Sugar 5 g, Protein 2 g, Vitamin A 23%, Vitamin C 404%, Calcium 1%, Iron 6%, Vitamin D 0%, Vitamin B-6 15%, Cobalamin 0%, Magnesium 6%')
 
 db.session.add(pepper)
@@ -113,14 +113,14 @@ db.session.add(spiralized_vegetables_roasted_red_pepper_tomato_pesto)
 
 chocolate = Ingredient(
 name='chocolate',
-image='https://i.ndtvimg.com/i/2018-03/chocolate_620x350_51520598238.jpg',
+image='https://images.pexels.com/photos/1693027/pexels-photo-1693027.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 nutrition_information='Total Fat 31 g,Saturated fat 19 g, Polyunsaturated fat 1.1 g, Monounsaturated fat 10 g, Trans fat 0.1 g, Cholesterol 8 mg, Sodium 24 mg, Potassium 559 mg, Carbohydrate 61 g, Dietary fiber 7 g, Sugar 48 g, Protein 4.9 g, Caffeine 43 mg, Vitamin A 1%, Vitamin C 0%, Calcium 5%, Iron 44%, Vitamin D 0%, Vitamin B-6 0%, Cobalamin 3%, Magnesium 36%')
 db.session.add(chocolate)
 
 
 orange = Ingredient(
 name='Orange',
-image='https://5.imimg.com/data5/KM/QP/MY-22954806/orange-500x500.jpg',
+image='https://images.pexels.com/photos/691166/pexels-photo-691166.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 nutrition_information=' Potassium 181 mg, Carbohydrate 12 g, Dietary fiber 2.4 g, Sugar 9 g, Protein 0.9 g, Vitamin A 4%, Vitamin C 88%, Calcium 4%, Iron 0%, Vitamin D 0%, Vitamin B-6 5%, Cobalamin 0%, Magnesium 2%')
 
 db.session.add(orange)
@@ -137,14 +137,14 @@ db.session.add(chocolate_orange_shortbread)
 
 tomatoes = Ingredient(
 name='tomatoes',
-image='https://foodsogoodmall.com/wp-content/uploads/2015/02/sliced_tomatoes-624.jpg',
+image='https://images.unsplash.com/photo-1502234665511-5745ea0a6a29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
 nutrition_information='Calories 18, Water 95 %, Protein 0.9 g, Carbs 3.9 g, Sugar 2.6 g, Fiber 1.2 g, Fat 0.2 g, Saturated 0.03 g, Monounsaturated 0.03 g, Polyunsaturated 0.08 g, Omega-6 0.08 g')
 db.session.add(tomatoes)
 
 
 cod = Ingredient(
 name='Cod',
-image='https://thecornishfishmonger.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/o/cod_fillet.jpg',
+image='https://previews.123rf.com/images/zhekos/zhekos1311/zhekos131100079/23843376-raw-cod-fish-fillet-with-lemon-slices-and-rosemary-closeup-on-wooden-background-vertical-view.jpg',
 nutrition_information='Total Fat 0.7g, Saturated Fat 0.1g, Cholesterol 43mg, Sodium 54mg, Protein 18g,Vitamin A 1 %, Vitamin C 2 %, Calcium 2 %, Iron 2 %')
 db.session.add(cod)
 
@@ -160,7 +160,7 @@ db.session.add(cod_couscous_balls)
 
 avocado = Ingredient(
 name='Avocado',
-image='https://images-na.ssl-images-amazon.com/images/I/81LKLCmdAQL._SY355_.jpg',
+image='https://images.pexels.com/photos/557659/pexels-photo-557659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 nutrition_information='Fat 15 g, Saturated fat 2.1 g, Polyunsaturated fat 1.8 g, Monounsaturated fat 10 g, Sodium 7 mg, Potassium 485 mg, Carbohydrate 9 g, Dietary fiber 7, Sugar 0.7 g, Protein 2 g, Vitamin A 2%, Vitamin C 16%, Calcium 1%, Iron 3%, Vitamin D 0%, Vitamin B-6 15%, Cobalamin 0%, Magnesium 7%')
 db.session.add(avocado)
 
@@ -175,7 +175,7 @@ db.session.add(avocado_banana_puree)
 
 courgette = Ingredient(
 name='Courgette',
-image='https://www.planetorganic.com/images/products/large/10075.jpg',
+image='https://images.pexels.com/photos/128420/pexels-photo-128420.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 nutrition_information='Total Fat 0.3, Saturated fat 0.1 g, Polyunsaturated fat 0.1g, Sodium 8 mg, Potassium 261 mg, Carbohydrate 3.1 g,Dietary fiber 1 g, Sugar 2.5 g, Protein 1.2 g, Vitamin A 4%, Vitamin C 29%, Calcium 1%, Iron 2%, Vitamin D 0%, Vitamin B-6 10%, Magnesium 4%'
 )
 db.session.add(courgette)
@@ -192,13 +192,13 @@ db.session.add(courgette_carrot_risotto)
 
 pancake = Ingredient(
 name='Pancake',
-image='http://visitlawrencecounty.com/wp-content/uploads/2018/10/pancakes.jpg',
+image='https://images.pexels.com/photos/357573/pexels-photo-357573.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
 nutrition_information='Total Fat 3.9g , Saturated Fat 0.8g , Polyunsaturated Fat 1.8g, Monounsaturated Fat 1g, Cholesterol 24mg, Sodium 176mg, Potassium 53mg, Total Carbohydrates 11g, Protein 2.6g grams, Vitamin A 1.6%, Vitamin C 0.2% , Calcium 6.7% , Iron 4% ')
 db.session.add(pancake)
 
 blueberries = Ingredient(
 name='blueberries',
-image='https://i5.walmartimages.ca/images/Large/250/8_r/6000196012508_R.jpg',
+image='https://images.unsplash.com/photo-1520605363242-1012f0ae0c15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80',
 nutrition_information='3.6 g dietary fiber, or 14.4 percent of your daily value (DV), 9 milligrams (mg) calcium, 0.9 percent DV., 9 mg magnesium, 2.25 percent DV., 114 mg potassium, 2.42 percent DV., 14.4 mg vitamin C, 24 percent DV., 9 micrograms (mcg) folate, 2.25 percent DV.')
 db.session.add(blueberries)
 
@@ -244,13 +244,13 @@ db.session.add(cod_tomato_sauce)
 
 muffins = Ingredient(
 name='muffins',
-image='https://kep.index.hu/1/0/1936/19368/193689/19368932_eb5ecf81f3d7edf9be3c6feaad135c76_wm.jpg',
+image='https://images.pexels.com/photos/1657343/pexels-photo-1657343.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 nutrition_information='Total Fat 16 g, Saturated fat 2.7 g, Polyunsaturated fat 7 g, Monounsaturated fat 6 g, Trans fat 0.3 g, Cholesterol 30 mg, Sodium 339 mg, Potassium 115 mg, Carbohydrate 54 g, Dietary fiber 1 g ,Sugar 33 g, Protein 4.5 g, Vitamin A 1%, Vitamin C 1%, Calcium 4%, Iron 7%, Vitamin D 1% , Cobalamin 3%, Magnesium 2%')
 db.session.add(muffins)
 
 sweet_potato = Ingredient(
 name='sweet potato',
-image='https://d2lhw32459hxui.cloudfront.net/files/uploads/drupal/uploads/2012/10/nksweetpotato.jpg',
+image='https://images.pexels.com/photos/89247/pexels-photo-89247.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 nutrition_information='Sodium 55 mg, Potassium 337 mg, Carbohydrate 20 g, Dietary fiber 3 g, Sugar 4.2 g, Protein 1.6 g, Vitamin A 283%, Vitamin C 4%, Calcium 3%, Iron 3%, Vitamin B-6 10%, Magnesium 6%')
 db.session.add(sweet_potato)
 
