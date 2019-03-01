@@ -3,13 +3,13 @@ import 'bulma'
 import axios from 'axios'
 import IngredientsCard from './IngredientsCard'
 import Auth from '../../lib/Auth'
-// import { Link } from 'react-router-dom'
-const choices = []
+
 class IngredientsIndex extends React.Component {
   constructor() {
     super()
 
     this.state = {
+      choices: []
     }
     this.handleClick = this.handleClick.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -25,38 +25,27 @@ class IngredientsIndex extends React.Component {
   }
 
   handleClick(e){
-    choices.push(parseInt(e.target.id))
-    console.log('CHOICE', choices)
+    if(this.state.choices.length < 2)this.state.choices.push(parseInt(e.target.id))
+    console.log('CHOICE', this.state.choices)
     console.log('STATE', this.state)
   }
 
   handleSubmit(){
-    const resultRecipes = this.state.recipes.filter( recipe => {
-      let recipeToReturn = true
-      choices.map(choice => {
-        recipe.ingredients.map(ingredient => {
-          if(ingredient.id === choice) choiceInRecipe =True
-        })
+    const resultRecipes = this.state.recipes.filter(recipe => {
+      //filter recipes to leave only
+      const recipeIngredients = recipe.ingredients
 
+      const filteredIngredients = Array.from(Object.values(recipeIngredients[0]))
+      //filtered ingredients- filtered to leave only those that equal choices [0] or [1]
+      filteredIngredients.filter(recipeIngredient => {
+        recipeIngredient === this.state.choices[0] || recipeIngredient === this.state.choices[1]
       })
-      return recipeToReturn
+      console.log('recipeIngredients', recipeIngredients)
+      console.log('filtered ingredients',filteredIngredients)
+      return resultRecipes
     })
-    console.log(resultRecipes)
-
-
-
-    // let variable = this.state.ingredients.map(ingredient => variable = ingredient.id )
-    // const filtered = this.state.recipes.filter(recipe => recipe.ingredients[`${variable}`].id === parseInt(choices[0]) && parseInt(choices[1]))
-    // console.log(filtered)
-
-
-    // if (parseInt(choices[0]) === this.state.ingredients[0].id && parseInt(choices[1]) === this.state.ingredients[1].id)
-    //   this.props.history.push('/recipes/1')
-    // else this.props.history.push('/ingredients')
-    // console.log(this.state.ingredients)
+    console.log('resultRecipes', resultRecipes)
   }
-
-
 
   render(){
     if(!this.state.ingredients) return <h1>Loading...</h1>
@@ -82,7 +71,7 @@ class IngredientsIndex extends React.Component {
             </div>
           )}
         </div>
-        <button className="button" onClick={this.handleSubmit}>Submit</button>
+        <button className="button ingredientbtn" onClick={this.handleSubmit}>Submit</button>
       </div>
     )
   }
