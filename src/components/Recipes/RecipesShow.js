@@ -75,6 +75,7 @@ class RecipesShow extends React.Component {
     } = this.state.recipe
     console.log('RECIPE SHOW STATE',this.state)
     return(
+
       <div>
         <section className="hero is-success is-small">
           <div className="hero-body">
@@ -82,6 +83,7 @@ class RecipesShow extends React.Component {
               <h1 className="title">
                 {name}
               </h1>
+
             </div>
           </div>
         </section>
