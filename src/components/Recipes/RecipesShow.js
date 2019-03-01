@@ -32,7 +32,7 @@ class RecipesShow extends React.Component {
           <div className="tile">
             <div className="tile is-parent is-vertical">
               <article className="tile is-child box notification is-white">
-                <figure className="image is-4by3">
+                <figure className="image is-4by3 Middle">
                   <img src={image} alt={name} />
                 </figure>
               </article>
