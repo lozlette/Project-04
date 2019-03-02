@@ -71,6 +71,7 @@ class RecipesShow extends React.Component {
       name,
       extra_ingredients: extraIngredients,
       comments,
+      ingredients,
       method
     } = this.state.recipe
     console.log('RECIPE SHOW STATE',this.state)
@@ -96,21 +97,28 @@ class RecipesShow extends React.Component {
                     <img src={image} alt={name} />
                   </figure>
                 </article>
-                <article className="tile is-child box notification is-white">
-                  <p className="title is-success">Nutrition of ingredient 1</p>
+                <article className="tile is-child box notification is-success">
+                  {ingredients.map(ingredient =>
+                    <div key={ingredient.id}>
+                      <h2 className="title is-2 is-white">Nutrition information on {ingredient.name}</h2>
+                      <p>{ingredient.nutrition_information}</p>
+                      <hr/>
+                    </div>
+                  )}
                 </article>
               </div>
               <div className="tile is-parent box">
                 <article className="tile is-child notification is-success">
                   <h2 className="title is-2">Ingredients</h2>
                   <p className="subtitle is-4">{extraIngredients}</p>
+                  <hr/>
                   <h2 className="title is-2">Method</h2>
                   <p className="subtitle is-4">{method}</p>
 
                 </article>
               </div>
               <div className="tile is-parent box">
-                <article className="tile is-child notification is-white">
+                <article className="tile is-child notification is-success">
                   <h2 className="title is-2">Comments</h2>
 
                   {this.state.commentData &&
@@ -128,9 +136,13 @@ class RecipesShow extends React.Component {
               <article className="tile is-child notification is-success">
                 <div className="content">
                   <h2 className="title is-2">See feedback on this recipe</h2>
-                  <p className="subtitle is-4">{comments[0].user.username}</p>
                   {comments.map(comment =>
-                    <div key={comment.id}>{comment.content}</div>
+                    <div key={comment.id}>
+                      <h3 className="title is-4 is-white">{comment.user.username} says:</h3>
+                      <p>{comment.content}</p>
+                      <p>{comment.user.created_at}</p>
+                      <hr/>
+                    </div>
                   )}
                 </div>
               </article>
