@@ -1,4 +1,4 @@
-from app import app, db
+from app import app, db, bcrypt
 from models.ingredient import Ingredient
 from models.recipe import Recipe
 from models.user import User
@@ -23,7 +23,7 @@ db.session.add(carrot)
 
 banana_carrot_seed_bread = Recipe(
 name='Banana, Carrot and Seed Bread',
-image='https://images.unsplash.com/photo-1522184216316-3c25379f9760?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+image='https://images.unsplash.com/photo-1547033964-1be30700c397?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
 extra_ingredients='150g / 5oz softened unsalted butter, 2 large eggs, 200g/ 7oz ripe bananas, peeled and mashed, 125g / 4½oz grated carrot, 25g / 1oz sultanas, 125g / 4½oz soft dark brown sugar, 225g / 8oz self-raising flour, ½ teaspoon ground cinnamon, 1 teaspoon mixed spice, 1 teaspoon ground ginger, 25g / 1oz pumpkin seeds, 25g / 1oz sunflower seeds, Butter, for spreading and greasing',
 method='1.Preheat the oven to 170°C/340°F/Gas 3, grease a 900 g/2 lb loaf tin and line it with baking parchment.2.Place all of the ingredients, except the topping, in a large mixing bowl. Whisk together with an electric hand-held whisk for 1–2 minutes until light and fluffy. Alternatively, use a stand mixer fitted with the paddle or whisk attachment. 3.Spoon the mixture into the tin and level out the top. 4.Sprinkle with the extra seeds and bake for 1–1¼ hours until golden, well risen and a skewer inserted comes out clean. 5.Remove from the oven and leave to cool on a wire rack, then remove from the tin. Dust with icing sugar (if using), cut into slices, spread with butter and serve.',
 ingredients=[banana, carrot]
@@ -70,9 +70,9 @@ db.session.add(kale)
 sweet_potato_kale_croquettes = Recipe(
 name='Sweet Potato and Kale Croquettes',
 image='https://www.annabelkarmel.com/wp-content/uploads/2018/08/Sweet-potato-and-kale-croquettes_small2-380x315.jpg',
-extra_ingredients='2 tbsp sunﬂ ower oil, 1 small onion, chopped, 100g (31/2oz) mushrooms, chopped, 1 medium carrot, grated, 20g (3/4oz) kale, chopped, 1 garlic clove, crushed, 150g (5 1/2oz) baking potato, pricked, 150g (5 1/2oz) sweet potato, pricked, 50g (1 3/4oz) fresh breadcrumbs or wheat- or gluten-free breadcrumbs, 30g (1oz) Cheddar cheese or dairy-free alternative, grated, Plain ﬂour or gluten-free ﬂour, to coat',
-method='Heat 1 tablespoon of the oil in a frying pan. Add the onion, mushrooms, carrot, kale, and garlic, and fry for 5 minutes over a medium heat. Leave to cool. 2.Cook the potatoes in a microwave for 10 minutes until soft. Leave to cool, then scoop out the potato ﬂ esh into a bowl. 3. Add the cooked vegetables, breadcrumbs, and cheese and mix together until blended. Shape into 14 small croquettes and roll in the ﬂour. 4.Heat the remaining 1 tablespoon of oil in a frying pan. Fry the croquettes for 3–4 minutes, until golden on all sides and cooked through. Drain on kitchen paper and leave to cool before serving. 5.When needed, thaw overnight in the fridge or leave out for a few hours at room temperature. Reheat in an oven preheated to 180ºC (fan 160ºC), gas 4 for 10–12 minutes.',
-ingredients=[kale]
+extra_ingredients='2 tbsp sunﬂower oil, 1 small onion, chopped, 100g (31/2oz) mushrooms, chopped, 1 medium carrot, grated, 20g (3/4oz) kale, chopped, 1 garlic clove, crushed, 150g (5 1/2oz) baking potato, pricked, 150g (5 1/2oz) sweet potato, pricked, 50g (1 3/4oz) fresh breadcrumbs or wheat or gluten-free breadcrumbs, 30g (1oz) Cheddar cheese or dairy-free alternative, grated, Plain ﬂour or gluten-free ﬂour, to coat',
+method='Heat 1 tablespoon of the oil in a frying pan. Add the onion, mushrooms, carrot, kale, and garlic, and fry for 5 minutes over a medium heat. Leave to cool. 2.Cook the potatoes in a microwave for 10 minutes until soft. Leave to cool, then scoop out the potato ﬂesh into a bowl. 3. Add the cooked vegetables, breadcrumbs, and cheese and mix together until blended. Shape into 14 small croquettes and roll in the ﬂour. 4.Heat the remaining 1 tablespoon of oil in a frying pan. Fry the croquettes for 3–4 minutes, until golden on all sides and cooked through. Drain on kitchen paper and leave to cool before serving. 5.When needed, thaw overnight in the fridge or leave out for a few hours at room temperature. Reheat in an oven preheated to 180ºC (fan 160ºC), gas 4 for 10–12 minutes.',
+ingredients=[kale],
 )
 db.session.add(sweet_potato_kale_croquettes)
 
@@ -182,7 +182,7 @@ db.session.add(courgette)
 
 courgette_carrot_risotto = Recipe(
 name='Courgette & Carrot Risotto',
-image='https://www.annabelkarmel.com/wp-content/uploads/2009/05/Summer-Risotto-3-380x315.jpg',
+image='https://images.unsplash.com/photo-1461009683693-342af2f2d6ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1031&q=80',
 extra_ingredients='900 ml vegetable stock or chicken stock, 4 large shallots or one onion, finely chopped, 1 garlic clove, crushed, 40 g butter, 1 tbsp olive oil, 40 g red pepper, chopped, 200 g arborio (risotto) rice, 75 g courgette, diced, 2 medium tomatoes, skinned, de-seeded & chopped (approx. 225 g), 4 tbsp white wine (for adult version), 40 g Italian hard style cheese, grated',
 method='1.Bring the stock to the boil and allow to simmer. Heat the oil and butter in a large frying pan and sauté the shallots and garlic for 1 minute. 2.Add the red pepper and cooked for 5 minutes, stirring occasionally until softened. Add the rice and make sure that it is well coated. Stir for 1 minute. 3.Add 1 or 2 ladlefuls of hot stock and simmer, stirring, until it has been absorbed, then add another ladleful of stock. 4.Continue adding the stock a little at a time, and simmer until the rice absorbs the liquid before adding more, stirring frequently.5.After 10 minutes, add the diced courgette and tomato.6.After about 8 minutes add the white wine (for adults). When all the stock has been added and the rice is cooked (it will probably take about 20 minutes for the rice to cook through), stir in the Italian hard style cheese until melted and season to taste.',
 ingredients=[courgette, carrot]
@@ -204,7 +204,7 @@ db.session.add(blueberries)
 
 blueberry_pancakes = Recipe(
 name='American Style Blueberry Pancakes',
-image='https://www.annabelkarmel.com/wp-content/uploads/2010/02/Blueberry-pancakes-3-380x315.jpg',
+image='https://images.pexels.com/photos/821403/pexels-photo-821403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 extra_ingredients='150 g plain flour, 2 tbsp granulated sugar, 1 tsp baking powder, 1/2 tsp bicarbonate of soda, 1 large pinch of salt, 250 ml buttermilk or 120 g plain yoghurt plus, 120 ml milk, 1 egg, 1/4 tsp vanilla extract, 200 g blueberries, sunflower oil for greasing, 2 tbsp maple syrup',
 method='1.Put the flour, sugar, bicarbonate of soda, baking powder and salt in a bowl. Add half the buttermilk, the egg and vanilla extract. 2.Whisk everything together to make a batter. Add the remaining buttermilk and whisk until smooth. 3.Add the blueberries and mix them into the batter gently. Try not to squash them. 4.Lightly oil and heat a non-stick frying pan. Drop in 2 tbsp batter per pancake. Cook for 1 ½ – 2 minutes, until golden underneath and bubbling on top. 5.Flip over and cook for a further 1 to 2 minutes. Serve with maple syrup.',
 ingredients=[pancake, blueberries]
@@ -224,7 +224,7 @@ db.session.add(blueberry_pear_banana_puree)
 
 chocolate_chip_kale_cookies = Recipe(
 name='Chocolate Chip Kale Cookies',
-image='https://chocolatecoveredkatie.com/wp-content/uploads/2016/12/kale-cookies-recipe.png',
+image='https://images.unsplash.com/photo-1497051788611-2c64812349fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=714&q=80',
 extra_ingredients='1 cup spelt, white, or oat flour, loosely packed (125g), 1/2 tsp baking soda,1/4 tsp salt, 1/2 cup unrefined sugar or xylitol,1/3 cup chocolate chips, 2 tbsp milk of choice, 2 tbsp oil (24g), 1/4 tsp pure vanilla extract, 1 cup raw kale or spinach, no stems',
 method='1 Preheat oven to 325 F. 2.Process kale or dice it extremely fine. 3. Combine all dry ingredients except kale in a medium bowl, then stir in remaining ingredients to form a dough. It will be dry at first, so keep stirring until a cookie-dough texture is achieved. (Add 1 additional tbsp milk of choice only if needed – I didn’t need it.) 4.Roll into balls. 5.Place on a cookie tray, and bake 11 minutes. 6.They will look underdone. 7.Remove from the oven anyway, and let them cool 10 minutes, during which time they will firm up. You can also make extra cookie dough balls and freeze them to bake at a later date.',
 ingredients=[chocolate, kale]
@@ -234,7 +234,7 @@ db.session.add(chocolate_chip_kale_cookies)
 
 cod_tomato_sauce = Recipe(
 name='Cod with Hearty Tomato Sauce',
-image='https://chocolatecoveredkatie.com/wp-content/uploads/2016/12/kale-cookies-recipe.png',
+image='https://images.pexels.com/photos/1516415/pexels-photo-1516415.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 extra_ingredients='2 cans (14-1/2 ounces each) diced tomatoes with basil, oregano and garlic, undrained, 4 cod fillets (6 ounces each), 2 tablespoons olive oil, divided, 2 medium onions, halved and thinly sliced (about 1-1/2 cups), 1/2 teaspoon dried oregano, 1/4 teaspoon pepper, 1/4 teaspoon crushed red pepper flakes, Hot cooked whole wheat pasta, Minced fresh parsley, optional',
 method='1.Place tomatoes in a blender. Cover and process until pureed. 2.Pat fish dry with paper towels. In a large skillet, heat 1 tablespoon oil over medium-high heat. Add cod fillets; cook until surface of fish begins to color, 2-4 minutes on each side. Remove from pan. 3.In same skillet, heat remaining oil over medium-high heat. Add onions; cook and stir until tender, 2-4 minutes. Stir in seasonings and pureed tomatoes; bring to a boil. Add cod; return just to a boil, spooning sauce over tops. Reduce heat; simmer, uncovered, until fish just begins to flake easily with a fork, 5-7 minutes. Serve with pasta. If desired, sprinkle with parsley.',
 ingredients=[cod, tomatoes]
@@ -256,7 +256,7 @@ db.session.add(sweet_potato)
 
 sweet_potato_muffins = Recipe(
 name='Sweet Potato Muffins',
-image='https://www.goodinthesimple.com/wp-content/uploads/2018/01/sweet-potato-muffins-in-basket-683x1024.jpg',
+image='https://images.unsplash.com/photo-1487124504955-e42a39e11aaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1012&q=80',
 extra_ingredients='3 cups of mashed sweet potato, 2 cups flour, 2 tsp cinnamon, 1 tsp baking soda, 1/4 tsp baking powder, 1/2 tsp salt, 1 cup sugar, 3/4 cup vegetable oil, 3 large eggs, 1 tsp vanilla, 1/2 cup ground flaxseed meal optional',
 method='1.Put the pears and blueberries into a saucepan. Simmer for 5 minutes until soft. 2.Add the banana and blend until smooth or to your desired consistency.',
 ingredients=[muffins, sweet_potato]
@@ -264,34 +264,77 @@ ingredients=[muffins, sweet_potato]
 db.session.add(sweet_potato_muffins)
 
 
-#
-# lauren = User(
-# username='Lauren',
-# email='lauren@bell.com',
-# password_hash='password',
-# avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic.png'
-# )
-# db.session.add(lauren)
+
+lauren = User(
+username='Lauren',
+email='lauren@bell.com',
+password_hash=bcrypt.generate_password_hash('password').decode('utf-8'),
+avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic.png'
+)
+db.session.add(lauren)
+comment2 = Comment(content='This is an unusual combination but very nices.', recipe=carrot_cheese_muffins, user=lauren)
+db.session.add(comment2)
+comment7 = Comment(content='A great way to introduce fish into my young one\'s diet.', recipe=cod_tomato_sauce, user=lauren)
+db.session.add(comment7)
+comment10 = Comment(content='Delicious. First time I used my spiralizer. It made a bit of a mess in the kitchen but was lots of fun. Thanks.', recipe=spiralized_vegetables_roasted_red_pepper_tomato_pesto, user=lauren)
+db.session.add(comment10)
+
+
+
 
 gessica = User(
 username='Gessica',
 email='g@mail.com',
-password_hash='password1',
+password_hash=bcrypt.generate_password_hash('password1').decode('utf-8'),
 avatar='https://www.whatsappprofiledpimages.com/wp-content/uploads/2018/07/awesome-profile-pics-300x300.jpg'
 )
 db.session.add(gessica)
 comment1 = Comment(content='This is a yummy recipe.', recipe=banana_carrot_seed_bread, user=gessica)
-
-# lauren = User(
-# name='Lauren',
-# email='lauren@bell.com',
-# password_hash='password',
-# avatar='https://workhound.com/wp-content/uploads/2017/05/placeholder-profile-pic.png'
-# )
-# db.session.add(lauren)
-
-
-
 db.session.add(comment1)
+comment6 = Comment(content='I found this recipe to be a bit too sweet.', recipe=sweet_potato_muffins, user=gessica)
+db.session.add(comment6)
+comment11 = Comment(content='This is one creamy and yummy puree', recipe=avocado_banana_puree, user=gessica)
+db.session.add(comment11)
+
+
+
+lisa = User(
+username='Lisa',
+email='lisa@mail.com',
+password_hash=bcrypt.generate_password_hash('password2').decode('utf-8'),
+avatar='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWfy52m6Vuo_i2sSV5uDIxuiLHBBIbfNjQsFnSiacsLxh81mw9'
+)
+db.session.add(lisa)
+comment3 = Comment(content='A good way of introducing spinach to my 18 months old.', recipe=salmon_broccoli_spinach_puree, user=lisa)
+db.session.add(comment3)
+comment12 = Comment(content='Very tasty, but the courgette need longer to cook, you have to add them before.', recipe=courgette_carrot_risotto, user=lisa)
+db.session.add(comment12)
+
+
+
+mary = User(
+username='Mary',
+email='mary@mail.com',
+password_hash=bcrypt.generate_password_hash('password3').decode('utf-8'),
+avatar='https://image.flaticon.com/icons/svg/194/194934.svg'
+)
+db.session.add(mary)
+comment13 = Comment(content='Very good pancakes, so light. Thanks for a great recipe,', recipe=blueberry_pancakes, user=lisa)
+db.session.add(comment13)
+
+
+comment4 = Comment(content='As delicious as this looks and sounds, I don\'t think my Oscar is quite ready for fried food yet. Maybe in 3 months time.', recipe=sweet_potato_kale_croquettes, user=lisa)
+comment5 = Comment(content='I made this last week and it was a hit with my twins', recipe=sweet_potato_kale_croquettes, user=mary)
+db.session.add(comment4)
+db.session.add(comment5)
+
+comment8 = Comment(content='OMG how fun! I don’t know if I could convince my kids to eat them, but it’s a cool idea =)', recipe=chocolate_chip_kale_cookies, user=gessica)
+comment9 = Comment(content='Another fun way to get green in your baked goods – Use sunflower seed butter and baking powder!', recipe=chocolate_chip_kale_cookies, user=lauren)
+db.session.add(comment8)
+db.session.add(comment9)
+
+
+
+
 
 db.session.commit()
