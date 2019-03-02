@@ -3,6 +3,7 @@ from models.ingredient import Ingredient
 from models.recipe import Recipe
 from models.user import User
 from models.comment import Comment
+from models.message import Message
 
 with app.app_context():
     db.drop_all()
@@ -333,8 +334,8 @@ comment9 = Comment(content='Another fun way to get green in your baked goods –
 db.session.add(comment8)
 db.session.add(comment9)
 
-
-
+message1 = Message(content='Hello Mary', receiver=mary, sender=lisa)
+db.session.add(message1)
 
 
 db.session.commit()
