@@ -1,11 +1,11 @@
 import os
 from app import app
-from controllers import users, auth, ingredients, recipes, comments, messages 
+from controllers import users, auth, ingredients, recipes, comments, messages
 
+app.register_blueprint(users.api, url_prefix='/api')
 app.register_blueprint(auth.api, url_prefix='/api')
 app.register_blueprint(ingredients.api, url_prefix='/api')
 app.register_blueprint(recipes.api, url_prefix='/api')
-app.register_blueprint(users.api, url_prefix='/api')
 app.register_blueprint(comments.api, url_prefix='/api')
 app.register_blueprint(messages.api, url_prefix='/api')
 

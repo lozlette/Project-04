@@ -7,7 +7,7 @@ import RecipesShow from './components/Recipes/RecipesShow'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
-import UserShow from './components/UserShow'
+import UserShow from './components/Users/UserShow'
 import 'bulma'
 import './style.scss'
 

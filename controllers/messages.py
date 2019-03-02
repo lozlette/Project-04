@@ -22,7 +22,6 @@ def show(message_id):
 def create():
     message, errors = message_schema.load(request.get_json())
     message.sender = g.current_user
-    message.receiver = 
 
     if errors:
         return jsonify(errors), 422
