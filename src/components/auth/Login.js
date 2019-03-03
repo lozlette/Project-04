@@ -37,10 +37,10 @@ class Login extends React.Component{
     const{email, password} = this.state.data
 
     return(
-      <section className= "hero">
+      <section className= "hero has-background-primary ">
         <div className="hero-body">
           <div className="column is-4 is-offset-4">
-            <h3 className="title has-text-centered">Login</h3>
+            <h4 className="title has-text-centered">Login</h4>
             <div className="box">
               <form onSubmit={this.handleSubmit}>
                 <div className="field">

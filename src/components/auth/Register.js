@@ -41,10 +41,10 @@ class Register extends React.Component{
     const{username,email, password, password_confirmation, avatar} = this.state.data
 
     return(
-      <section className= "hero">
+      <section className= "hero has-background-primary">
         <div className="hero-body">
           <div className="column is-4 is-offset-4">
-            <h3 className="title has-text-centered">Register</h3>
+            <h4 className="title has-text-centered">Register</h4>
             <div className="box">
               <form onSubmit= {this.handleSubmit}>
                 <div className="field">

@@ -34,7 +34,7 @@ db.session.add(banana_carrot_seed_bread)
 
 carrot_cheese_muffins = Recipe(
 name='Carrot & Cheese Muffins',
-image='https://www.annabelkarmel.com/wp-content/uploads/2019/02/Carrot-Cheese-and-herb-Muffins-1800x1800.jpg',
+image='https://images.unsplash.com/photo-1548693563-25dc13e7b2c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
 extra_ingredients='2 eggs, 175g self raising flour, 1 tsp baking powder, 100 ml milk,100g carrot, peeled and grated, 3 tbsp sunflower oil,1 tbsp chives, chopped,6 spring onions, sliced,1 tbsp fresh basil , chopped,50g parmesan, grated',
 method='1.Preheat the oven to 180C Fan. Line a muffin tin with 10 muffin cases.2.Whisk the egg, flour, baking powder, milk and oil together in a large bowl. Add the carrot, herbs, spring onion and cheese and fold together. Spoon into the cases.3.Bake in the oven for 18 minutes until sell risen and lightly golden brown.',
 ingredients=[carrot]
@@ -69,7 +69,7 @@ db.session.add(kale)
 
 sweet_potato_kale_croquettes = Recipe(
 name='Sweet Potato and Kale Croquettes',
-image='https://www.annabelkarmel.com/wp-content/uploads/2018/08/Sweet-potato-and-kale-croquettes_small2-380x315.jpg',
+image='https://www.thespruceeats.com/thmb/5QGgbDoHWwNcsG6hP3anCEGlG_8=/4288x2848/filters:no_upscale():max_bytes(150000):strip_icc()/coxinha-brazilian-chicken-croquettes-3029668-Hero-5b7d5f9546e0fb00252abc5f.jpg',
 extra_ingredients='2 tbsp sunﬂower oil, 1 small onion, chopped, 100g (31/2oz) mushrooms, chopped, 1 medium carrot, grated, 20g (3/4oz) kale, chopped, 1 garlic clove, crushed, 150g (5 1/2oz) baking potato, pricked, 150g (5 1/2oz) sweet potato, pricked, 50g (1 3/4oz) fresh breadcrumbs or wheat or gluten-free breadcrumbs, 30g (1oz) Cheddar cheese or dairy-free alternative, grated, Plain ﬂour or gluten-free ﬂour, to coat',
 method='Heat 1 tablespoon of the oil in a frying pan. Add the onion, mushrooms, carrot, kale, and garlic, and fry for 5 minutes over a medium heat. Leave to cool. 2.Cook the potatoes in a microwave for 10 minutes until soft. Leave to cool, then scoop out the potato ﬂesh into a bowl. 3. Add the cooked vegetables, breadcrumbs, and cheese and mix together until blended. Shape into 14 small croquettes and roll in the ﬂour. 4.Heat the remaining 1 tablespoon of oil in a frying pan. Fry the croquettes for 3–4 minutes, until golden on all sides and cooked through. Drain on kitchen paper and leave to cool before serving. 5.When needed, thaw overnight in the fridge or leave out for a few hours at room temperature. Reheat in an oven preheated to 180ºC (fan 160ºC), gas 4 for 10–12 minutes.',
 ingredients=[kale],
@@ -182,7 +182,7 @@ db.session.add(courgette)
 
 courgette_carrot_risotto = Recipe(
 name='Courgette & Carrot Risotto',
-image='https://images.unsplash.com/photo-1461009683693-342af2f2d6ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1031&q=80',
+image='https://images.unsplash.com/photo-1476124369491-e7addf5db371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
 extra_ingredients='900 ml vegetable stock or chicken stock, 4 large shallots or one onion, finely chopped, 1 garlic clove, crushed, 40 g butter, 1 tbsp olive oil, 40 g red pepper, chopped, 200 g arborio (risotto) rice, 75 g courgette, diced, 2 medium tomatoes, skinned, de-seeded & chopped (approx. 225 g), 4 tbsp white wine (for adult version), 40 g Italian hard style cheese, grated',
 method='1.Bring the stock to the boil and allow to simmer. Heat the oil and butter in a large frying pan and sauté the shallots and garlic for 1 minute. 2.Add the red pepper and cooked for 5 minutes, stirring occasionally until softened. Add the rice and make sure that it is well coated. Stir for 1 minute. 3.Add 1 or 2 ladlefuls of hot stock and simmer, stirring, until it has been absorbed, then add another ladleful of stock. 4.Continue adding the stock a little at a time, and simmer until the rice absorbs the liquid before adding more, stirring frequently.5.After 10 minutes, add the diced courgette and tomato.6.After about 8 minutes add the white wine (for adults). When all the stock has been added and the rice is cooked (it will probably take about 20 minutes for the rice to cook through), stir in the Italian hard style cheese until melted and season to taste.',
 ingredients=[courgette, carrot]
@@ -269,7 +269,7 @@ db.session.add(sweet_potato_muffins)
 #banana combinations
 apple_banana_cake_bread = Recipe(
 name='Easy apple banana cake bread',
-image='https://sweetcsdesigns.com/wp-content/uploads/2018/06/Easy-Baked-Bananna-Cake-Recipe-Picture.jpg',
+image='https://images-gmi-pmc.edge-generalmills.com/f2381a0e-7aff-45a7-be6b-527fbf1ba28e.jpg',
 extra_ingredients='2 cups flour, 3/4 teaspoon baking soda, 1/8 teaspoon salt, 2 teaspoons cinnamon, 2 bananas , mashed, 1/2 cup sugar, 1/4 cup brown sugar, 1/3 cup sour cream, 1/4 cup vegetable oil, 2 eggs, 2 teaspoons vanilla, 1/2 cup diced apple, skins removed, 1/2 banana, sliced thin for garnish',
 method='1.Preheat oven to 350 and prepare 9×5 inch loaf pan, cake pan, OR tarte pan with parchment paper or grease it generously. 2.In one large bowl mix flour, baking soda, salt and cinnamon. 3.In another large bowl mix together banana, sugar, brown sugar, sour cream, oil, eggs and vanilla. 4.Add wet mixture to the flour mixture and stir well till all is incorporated. 5.Stir in apples and mix to evenly distribute. 6.Pour into pan. 7.Lay thin sliced bananas on top to caramelize as bread bakes. 8.Bake for 1 hour and 10 minutes, until golden brown and a stick inserted in the middle comes out clean. 9.Cool before removing from pan.',
 ingredients=[banana, apple]
@@ -296,7 +296,7 @@ db.session.add(banana_kiwi_kale_smoothie)
 
 chocolate_orange_banana_bread = Recipe(
 name='Chocolate, orange and banana bread',
-image='https://www.myfussyeater.com/wp-content/uploads/2018/02/Chocolate-Orange-Banana-Bread_002.jpg',
+image='https://media.bakingmad.com/app_/responsive/BakingMad/media/content/Recipes/Cakes/Apple-Crumble-Loaf-Cake/1-Apple-Crumble-Cake-WEB.jpg?w=640',
 extra_ingredients='275g / 1.75 cups plain or all purpose flour (can be gluten free), 1 tsp baking powder, 3/4 tsp baking soda, 2 medium ripe bananas, mashed, 75g / 0.3 cup coconut oil or butter, melted, 70g / 0.3 cup honey, 50g / 0.25 cup plain yogurt, 1 medium egg, 2 tsp vanilla extract, 1 orange, 75g /0.5 cup chocolate chips',
 method='1.Preheat the oven to 180c/350f. Grease and line a 2lb baking tin with parchment paper. 2.Add the flour, baking soda and baking powder to a large bowl and mix with a spoon. 3.In another bowl add the mashed banana, coconut oil or butter, honey, yogurt, egg and vanilla extract and mix well with a spoon. 4.Add the zest and juice of the whole orange and mix again. 5.Add the wet ingredients to the dry ingredients and mix with a spoon just enough until all the ingredients have combined.6.Finally stir in the chocolate chips. 7.Pour the mixture into the prepared tin and bake in the oven for 30 minutes. Remove, cover loosely with tin foil (this will stop the top of the bread getting too brown) and then return to the oven for another 20-25 minutes until the bread is cooked through and a skewer inserted in the middle comes out dry. 8.Once the loaf has cooked, remove it from the oven. Allow to cool in the tin for 5-10 minutes before transferring to a wire rack to cool completely.',
 ingredients=[banana, chocolate]
@@ -305,7 +305,7 @@ db.session.add(chocolate_orange_banana_bread)
 
 orange_banana_date_oatmeal = Recipe(
 name='Orange Banana Date Oatmeal',
-image='https://images.unsplash.com/photo-1548807371-30dc1bbe6cb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+image='https://images.unsplash.com/photo-1517777596324-5df4025800f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80',
 extra_ingredients='2 cups Tropicana Pure Premium® orange juice, 1 cup water, 1/4 teaspoon salt (optional), 1/8 teaspoon ground nutmeg, 1-1/2 cups Quaker® Oats (quick or old fashioned, uncooked), 3/4 cup chopped dates or raisins, 1 medium-size ripe banana, mashed',
 method='1.In medium saucepan, bring juice, water, salt and nutmeg to a boil. 2. Stir in oats and dates. 3.Return to a boil; reduce heat. 4.Cook 1 minute for quick oats or 5 minutes for old fashioned oats or until most of liquid is absorbed, stirring occasionally. 5.Stir in banana. 6.Let stand until of desired consistency.',
 ingredients=[banana, orange]
@@ -314,7 +314,7 @@ db.session.add(orange_banana_date_oatmeal)
 
 banana_zucchini_wholemeal_muffins = Recipe(
 name='Banana Zucchini Wholemeal Muffins',
-image='https://mykidslickthebowl.com/wp-content/uploads/2018/11/healthy-banana-wholemeal-muffins.jpg',
+image='https://images.unsplash.com/photo-1551007796-26dd82e6175d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
 extra_ingredients='1 medium banana 160g, 2 eggs, ¾ cup milk, 1/4  cup oil, 1 tsp vanilla, 3 Tbsp maple syrup or honey, 2 zucchini approx 250g, 2 cups wholemeal flour, 3 teaspoon baking powder, 1/3 cup choc chips',
 method='1.Preheat your oven to 180 degrees Celsius and prepare a muffin tin. ( you will either need to grease it well or line with muffin liners. 2.In a large bowl mash a banana, add eggs, milk, oil, vanilla and maple syrup and mix well so that the eggs and liquids are well combined. 3.Peel and grate the zucchini. 4.Over a sink squeeze the grated zucchini to remove excess moisture, add the grated zucchini to the wet ingredients. 5.Add the wholemeal flour and baking powder to the bowl, I sprinkle the baking powder over the flour as I am too lazy to sift. 6.Mix, but not too well, the general rule is to not over mix a muffin, add the choc chips (reserve a few to sprinkle on the top) and again just mix gently. 7.Portion into a  12 regular muffin tray, top with a few of the reserved choc chips (just so the picky eater will definitely see them. 8.Bake at 180 degrees Celsius for 25- 30 minutes or until golden',
 ingredients=[banana, courgette]
@@ -332,7 +332,7 @@ db.session.add(banana_blender_pancakes)
 
 banana_muffins = Recipe(
 name='Banana Muffins',
-image='https://www.superhealthykids.com/wp-content/uploads/2018/07/banana-muffins-06-640.jpg',
+image='https://images.unsplash.com/photo-1519869491916-8ca6f615d6bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
 extra_ingredients='1 cup – almond milk, unsweetened, 2 large – egg, 1/2 cup – sugar, 3 medium – banana, 2 tablespoon – coconut oil, 2 teaspoon – vanilla extract, 1 teaspoon – cinnamon, 1 1/4 cup – flour, whole wheat, 1/2 cup – flour, all-purpose, 1 1/4 teaspoon – baking powder, 1/2 teaspoon – baking soda, 1/4 teaspoon – salt',
 method='1.Preheat oven to 400 degrees F. Add 18 liners to muffin tins. Set aside. 2.Mix almond milk, eggs, sugar, bananas, coconut oil and vanilla in a blender until smooth. 3.In a large mixing bowl, stir together cinnamon, flours, baking powder, baking soda and salt. Make a well in the middle of the flour and pour in the wet ingredients while gently mixing together. Stir just until combined. 4.Pour batter into muffin cups filling 3/4 full. 5.Bake for 15-18 minutes or until a toothpick inserted comes out clean. Allow to cool for 5 minutes before serving.',
 ingredients=[banana, muffins]
