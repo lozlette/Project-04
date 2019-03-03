@@ -30,9 +30,6 @@ class RecipesShow extends React.Component {
 
   componentDidMount(){
     this.getRecipe()
-    // axios.get(`/api/recipes/${this.props.match.params.id}`,
-    //   {headers: { Authorization: `Bearer ${Auth.getToken()}` }} )
-    //   .then(res => this.setState({ recipe: res.data }))
   }
 
   handleChangeComment({ target: {name, value }}) {

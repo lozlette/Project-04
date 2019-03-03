@@ -14,7 +14,7 @@ def index():
     return users_schema.jsonify(users)
 
 @api.route('/users/<int:user_id>', methods=['GET'])
-@secure_route
+# @secure_route
 def show(user_id):
     user = User.query.get(user_id)
     return user_schema.jsonify(user)

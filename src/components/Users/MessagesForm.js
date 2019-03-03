@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MessagesForm = ({ handleChangeMessage, handleSubmitMessage, messageData }) => {
+const MessagesForm = ({ handleChangeMessage, handleSubmitMessage, messageText }) => {
   return(
     <form onSubmit={handleSubmitMessage}>
       <div className="field">
@@ -8,8 +8,8 @@ const MessagesForm = ({ handleChangeMessage, handleSubmitMessage, messageData })
           <textarea
             className="textarea"
             name="content"
-            placeholder="Please give feedback on this recipe!"
-            defaultValue={messageData.content}
+            placeholder="Enter your message here"
+            defaultValue={messageText}
             onChange={handleChangeMessage}
             maxLength="250"
             rows="6">

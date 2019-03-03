@@ -11,6 +11,10 @@ class Auth{
     localStorage.removeItem('token')
   }
 
+  static getUserID(){
+    return this.getPayload().sub
+  }
+
   static getPayload (){
     const token = this.getToken()
     if(!token) return false

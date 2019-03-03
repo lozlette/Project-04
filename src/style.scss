@@ -1,7 +1,5 @@
 @charset 'utf-8';
 
-
-
 @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/sass/base/_all.sass";
 @import "~bulma/sass/elements/button.sass";
@@ -25,7 +23,7 @@
 .imagecontainer {
   height: 92vh;
   max-width: 100%;
-  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url('https://cdn.closeronline.co.uk/one/media/5ac7/9768/4307/0b51/94af/ea20/can-fruit-veg-fight-illness.jpg?quality=50&width=960&ratio=16-9&resizeStyle=aspectfill&format=jpg');
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)), url('https://kinderling.s3.amazonaws.com/kinderling/assets/processed/21/1858b02bb811e79163ab7c94478457/2384ebe02bb811e7973bdddc08fd00dc_content_medium.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -60,6 +58,8 @@
   width: 100%;
   height:15rem;
   padding: 3%;
+
+
 }
 
 .image {
@@ -83,6 +83,12 @@
   &:hover {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.3);
     margin: 5px;
+  }
+  &:active {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.8);
+  }
+  &:visited {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.8);
   }
 }
 

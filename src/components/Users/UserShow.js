@@ -1,24 +1,58 @@
 import React from 'react'
 import 'bulma'
 import axios from 'axios'
+import Auth from '../../lib/Auth'
+import MessagesForm from './MessagesForm'
 
 
 class UserShow extends React.Component {
   constructor() {
     super()
 
-    this.state = {}
+    this.state = {
+      messageText: ''
+    }
 
+  }
+
+  getUser(){
+    axios.get(`/api/users/${this.props.match.params.id}`)
+      .then(res => this.setState({ user: res.data }))
   }
 
   componentDidMount(){
-    axios.get(`/api/users/${this.props.match.params.id}`)
-      .then(res => this.setState({ users: res.data }))
+    this.getUser()
+  }
+
+  handleChangeMessage(e) {
+    const text = e.target.value
+    this.setState({
+      messageText: { text }
+    })
+  }
+
+  handleSubmitComment(e){
+    e.preventDefault()
+    console.log('HandleSubmit',this.state.messaageText)
+
+    const messageText = {...this.state.messageText, user: this.state.user}
+    axios
+      .post('/api/users', messageText,
+        { headers: { Authorization: `Bearer ${Auth.getToken()}` }}
+      )
+      .then(res => {
+        console.log('res', res)
+        this.setState({
+          messageText: ''
+        })
+        this.getUser()
+      })
+      .catch(err => alert(err.message))
   }
   render() {
-    if(!this.state.users) return <h1>Loading...</h1>
-    console.log(this.state.users)
-    const { username, email, avatar} = this.state.users
+    if(!this.state.user) return <h1>Loading...</h1>
+    console.log(this.state.user)
+    const { username, email, avatar} = this.state.user
     return (
       <div>
         <section className="hero is-success is-small">
@@ -50,6 +84,13 @@ class UserShow extends React.Component {
           </div>
 
         </div>
+        <div className="container has-text-centered">
+          <div className="column is-4 is-offset-4">
+            <MessagesForm />
+          </div>
+
+        </div>
+
       </div>
     )
   }
