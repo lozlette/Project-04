@@ -41,70 +41,88 @@ class Register extends React.Component{
     const{username,email, password, password_confirmation, avatar} = this.state.data
 
     return(
-      <main className= "section">
-        <div className="container">
-          <form onSubmit= {this.handleSubmit}>
-            <h2 className="title"> Register </h2>
+      <section className= "hero">
+        <div className="hero-body">
+          <div className="column is-4 is-offset-4">
+            <h3 className="title has-text-centered">Register</h3>
+            <div className="box">
+              <form onSubmit= {this.handleSubmit}>
+                <div className="field">
+                  <div className="control">
+                  </div>
+                  <div className="field">
+                    <label className="label is-large"> Username</label>
+                    <div className="controls">
+                      <input
+                        className="input"
+                        name="username"
+                        placeholder="Username"
+                        value={username}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label className="label is-large"> Email </label>
+                    <div className="control">
+                      <input
+                        type="email"
+                        className="input"
+                        name="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label className="label is-large"> Password </label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label className="label is-large"> Password Confirmation </label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="password"
+                        name="password_confirmation"
+                        placeholder="Password Confirmation"
+                        value={password_confirmation}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                  </div>
 
-            <div className="field">
-              <label className="label"> Username</label>
-              <input
-                name="username"
-                placeholder="Username"
-                value={username}
-                onChange={this.handleChange}
-              />
+                  <div className="field">
+                    <label className="label is-large"> Image </label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="avatar"
+                        name="avatar"
+                        placeholder="Image"
+                        value={avatar}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button className="button is-success is-medium is-fullwidth">Submit</button>
+              </form>
             </div>
-
-            <div className="field">
-              <label className="label"> Email </label>
-              <input
-                name="email"
-                placeholder="Email"
-                value={email}
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <div className="field">
-              <label className="label"> Password </label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Password"
-                value={password}
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <div className="field">
-              <label className="label"> Password Confirmation </label>
-              <input
-                type="password"
-                name="password_confirmation"
-                placeholder="Password Confirmation"
-                value={password_confirmation}
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <div className="field">
-              <label className="label"> Image </label>
-              <input
-                type="avatar"
-                name="avatar"
-                placeholder="Image"
-                value={avatar}
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <button className='button is-primary'>Submit</button>
-          </form>
+          </div>
         </div>
-      </main>
+      </section>
     )
-
   }
 }
 

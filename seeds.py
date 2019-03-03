@@ -254,6 +254,7 @@ image='https://images.pexels.com/photos/89247/pexels-photo-89247.png?auto=compre
 nutrition_information='Sodium 55 mg, Potassium 337 mg, Carbohydrate 20 g, Dietary fiber 3 g, Sugar 4.2 g, Protein 1.6 g, Vitamin A 283%, Vitamin C 4%, Calcium 3%, Iron 3%, Vitamin B-6 10%, Magnesium 6%')
 db.session.add(sweet_potato)
 
+
 sweet_potato_muffins = Recipe(
 name='Sweet Potato Muffins',
 image='https://images.unsplash.com/photo-1487124504955-e42a39e11aaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1012&q=80',
@@ -265,6 +266,90 @@ db.session.add(sweet_potato_muffins)
 
 
 
+#banana combinations
+apple_banana_cake_bread = Recipe(
+name='Easy apple banana cake bread',
+image='https://sweetcsdesigns.com/wp-content/uploads/2018/06/Easy-Baked-Bananna-Cake-Recipe-Picture.jpg',
+extra_ingredients='2 cups flour, 3/4 teaspoon baking soda, 1/8 teaspoon salt, 2 teaspoons cinnamon, 2 bananas , mashed, 1/2 cup sugar, 1/4 cup brown sugar, 1/3 cup sour cream, 1/4 cup vegetable oil, 2 eggs, 2 teaspoons vanilla, 1/2 cup diced apple, skins removed, 1/2 banana, sliced thin for garnish',
+method='1.Preheat oven to 350 and prepare 9×5 inch loaf pan, cake pan, OR tarte pan with parchment paper or grease it generously. 2.In one large bowl mix flour, baking soda, salt and cinnamon. 3.In another large bowl mix together banana, sugar, brown sugar, sour cream, oil, eggs and vanilla. 4.Add wet mixture to the flour mixture and stir well till all is incorporated. 5.Stir in apples and mix to evenly distribute. 6.Pour into pan. 7.Lay thin sliced bananas on top to caramelize as bread bakes. 8.Bake for 1 hour and 10 minutes, until golden brown and a stick inserted in the middle comes out clean. 9.Cool before removing from pan.',
+ingredients=[banana, apple]
+)
+db.session.add(apple_banana_cake_bread)
+
+spinach_banana_smoothie = Recipe(
+name='Spinach and banana smoothie',
+image='https://images.unsplash.com/photo-1545018595-b770da5d9e42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80',
+extra_ingredients='250ml soya milk, 20g fresh spinach leaves, or more to taste, 1 large banana, sliced',
+method='Blend soya milk and spinach leaves together in a blender until smooth. 2.Add banana and pulse until thoroughly blended.',
+ingredients=[spinach, banana]
+)
+db.session.add(spinach_banana_smoothie)
+
+banana_kiwi_kale_smoothie = Recipe(
+name='Banana, Kiwi and Kale Smoothie',
+image='https://diethood.com/wp-content/uploads/2014/03/Kale-Smoothie.jpg',
+extra_ingredients='2 very ripe bananas, 2 kiwis , peeled and sliced in half, 1 cup kale , washed and tightly packed, 1 cup milk, 2 to 3 tablespoons honey, 1/2 cup ice',
+method='1.Combine all ingredients into your blender. 2.Blend on full strength until thoroughly incorporated and smooth. 3.Pour into glasses and serve.',
+ingredients=[banana, kale]
+)
+db.session.add(banana_kiwi_kale_smoothie)
+
+chocolate_orange_banana_bread = Recipe(
+name='Chocolate, orange and banana bread',
+image='https://www.myfussyeater.com/wp-content/uploads/2018/02/Chocolate-Orange-Banana-Bread_002.jpg',
+extra_ingredients='275g / 1.75 cups plain or all purpose flour (can be gluten free), 1 tsp baking powder, 3/4 tsp baking soda, 2 medium ripe bananas, mashed, 75g / 0.3 cup coconut oil or butter, melted, 70g / 0.3 cup honey, 50g / 0.25 cup plain yogurt, 1 medium egg, 2 tsp vanilla extract, 1 orange, 75g /0.5 cup chocolate chips',
+method='1.Preheat the oven to 180c/350f. Grease and line a 2lb baking tin with parchment paper. 2.Add the flour, baking soda and baking powder to a large bowl and mix with a spoon. 3.In another bowl add the mashed banana, coconut oil or butter, honey, yogurt, egg and vanilla extract and mix well with a spoon. 4.Add the zest and juice of the whole orange and mix again. 5.Add the wet ingredients to the dry ingredients and mix with a spoon just enough until all the ingredients have combined.6.Finally stir in the chocolate chips. 7.Pour the mixture into the prepared tin and bake in the oven for 30 minutes. Remove, cover loosely with tin foil (this will stop the top of the bread getting too brown) and then return to the oven for another 20-25 minutes until the bread is cooked through and a skewer inserted in the middle comes out dry. 8.Once the loaf has cooked, remove it from the oven. Allow to cool in the tin for 5-10 minutes before transferring to a wire rack to cool completely.',
+ingredients=[banana, chocolate]
+)
+db.session.add(chocolate_orange_banana_bread)
+
+orange_banana_date_oatmeal = Recipe(
+name='Orange Banana Date Oatmeal',
+image='https://images.unsplash.com/photo-1548807371-30dc1bbe6cb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+extra_ingredients='2 cups Tropicana Pure Premium® orange juice, 1 cup water, 1/4 teaspoon salt (optional), 1/8 teaspoon ground nutmeg, 1-1/2 cups Quaker® Oats (quick or old fashioned, uncooked), 3/4 cup chopped dates or raisins, 1 medium-size ripe banana, mashed',
+method='1.In medium saucepan, bring juice, water, salt and nutmeg to a boil. 2. Stir in oats and dates. 3.Return to a boil; reduce heat. 4.Cook 1 minute for quick oats or 5 minutes for old fashioned oats or until most of liquid is absorbed, stirring occasionally. 5.Stir in banana. 6.Let stand until of desired consistency.',
+ingredients=[banana, orange]
+)
+db.session.add(orange_banana_date_oatmeal)
+
+banana_zucchini_wholemeal_muffins = Recipe(
+name='Banana Zucchini Wholemeal Muffins',
+image='https://mykidslickthebowl.com/wp-content/uploads/2018/11/healthy-banana-wholemeal-muffins.jpg',
+extra_ingredients='1 medium banana 160g, 2 eggs, ¾ cup milk, 1/4  cup oil, 1 tsp vanilla, 3 Tbsp maple syrup or honey, 2 zucchini approx 250g, 2 cups wholemeal flour, 3 teaspoon baking powder, 1/3 cup choc chips',
+method='1.Preheat your oven to 180 degrees Celsius and prepare a muffin tin. ( you will either need to grease it well or line with muffin liners. 2.In a large bowl mash a banana, add eggs, milk, oil, vanilla and maple syrup and mix well so that the eggs and liquids are well combined. 3.Peel and grate the zucchini. 4.Over a sink squeeze the grated zucchini to remove excess moisture, add the grated zucchini to the wet ingredients. 5.Add the wholemeal flour and baking powder to the bowl, I sprinkle the baking powder over the flour as I am too lazy to sift. 6.Mix, but not too well, the general rule is to not over mix a muffin, add the choc chips (reserve a few to sprinkle on the top) and again just mix gently. 7.Portion into a  12 regular muffin tray, top with a few of the reserved choc chips (just so the picky eater will definitely see them. 8.Bake at 180 degrees Celsius for 25- 30 minutes or until golden',
+ingredients=[banana, courgette]
+)
+db.session.add(banana_zucchini_wholemeal_muffins)
+
+banana_blender_pancakes = Recipe(
+name='Banana Blender Pancakes',
+image='https://mykidslickthebowl.com/wp-content/uploads/2018/03/banana-blender-pancakes-nutribullet-recipes-4-of-2017.jpg',
+extra_ingredients='150 g Banana (1-2), 1/2 Cup Greek style yoghurt (140g), 1 Egg, 1 Cup rolled oats, 1 Tbsp maple syrup or honey, 1 tsp cinnamon, 1 tsp Vanilla essence, Butter/oil to grease pan',
+method='1.Put all ingredients in blender and whizz until smooth batter. 2.Pour batter into a lightly greased pan on medium heat (works best as mini pancakes). 3.Wait for bubbles to appear on the surface and then flip. 4.Cook until golden on both sides. 5.Serve',
+ingredients=[banana, pancake]
+)
+db.session.add(banana_blender_pancakes)
+
+banana_muffins = Recipe(
+name='Banana Muffins',
+image='https://www.superhealthykids.com/wp-content/uploads/2018/07/banana-muffins-06-640.jpg',
+extra_ingredients='1 cup – almond milk, unsweetened, 2 large – egg, 1/2 cup – sugar, 3 medium – banana, 2 tablespoon – coconut oil, 2 teaspoon – vanilla extract, 1 teaspoon – cinnamon, 1 1/4 cup – flour, whole wheat, 1/2 cup – flour, all-purpose, 1 1/4 teaspoon – baking powder, 1/2 teaspoon – baking soda, 1/4 teaspoon – salt',
+method='1.Preheat oven to 400 degrees F. Add 18 liners to muffin tins. Set aside. 2.Mix almond milk, eggs, sugar, bananas, coconut oil and vanilla in a blender until smooth. 3.In a large mixing bowl, stir together cinnamon, flours, baking powder, baking soda and salt. Make a well in the middle of the flour and pour in the wet ingredients while gently mixing together. Stir just until combined. 4.Pour batter into muffin cups filling 3/4 full. 5.Bake for 15-18 minutes or until a toothpick inserted comes out clean. Allow to cool for 5 minutes before serving.',
+ingredients=[banana, muffins]
+)
+db.session.add(banana_muffins)
+
+banana_sweet_potato_mini_cakes = Recipe(
+name='Banana Sweet Potato Mini Cakes',
+image='https://images.unsplash.com/photo-1508737523220-e22aa75d0d33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80',
+extra_ingredients='1 banana, 1 cup chopped sweet potato, 50g butter, softened, 1 egg, 1 cup self raising flour',
+method='1.Boil or steam sweet potato until tender. 2.Preheat oven to 180 C (355 F) and line a baking tray with baking paper. 3.In a large bowl, mash banana, sweet potato and softened butter together until well mashed and combined. 4.Whisk the egg in a small bowl or cup to break up the yolk, then add it to the mixing bowl and mix it through. 5.Add flour and mix until well combined. 6.Drop spoonfuls of the mixture onto the prepared baking tray, evenly spaced. 7.Bake for 14-15 minutes, until firm.',
+ingredients=[banana, sweet_potato]
+)
+db.session.add(banana_sweet_potato_mini_cakes)
+
+
+#users and comments
 lauren = User(
 username='Lauren',
 email='lauren@bell.com',
@@ -278,7 +363,10 @@ comment7 = Comment(content='A great way to introduce fish into my young one\'s d
 db.session.add(comment7)
 comment10 = Comment(content='Delicious. First time I used my spiralizer. It made a bit of a mess in the kitchen but was lots of fun. Thanks.', recipe=spiralized_vegetables_roasted_red_pepper_tomato_pesto, user=lauren)
 db.session.add(comment10)
-
+comment14 = Comment(content='I’ve made apple cakes and I’ve made banana cakes. But I’ve never considered combining the two. This looks great!', recipe=apple_banana_cake_bread, user=lauren)
+db.session.add(comment14)
+comment21 = Comment(content='Could you replace the almond milk with regular milk or coconut milk?', recipe=banana_muffins, user=lauren)
+db.session.add(comment21)
 
 
 
@@ -295,7 +383,10 @@ comment6 = Comment(content='I found this recipe to be a bit too sweet.', recipe=
 db.session.add(comment6)
 comment11 = Comment(content='This is one creamy and yummy puree', recipe=avocado_banana_puree, user=gessica)
 db.session.add(comment11)
-
+comment15 = Comment(content='Strong banana flavour and quite sweet. I used milk instead.', recipe=spinach_banana_smoothie, user=gessica)
+db.session.add(comment15)
+comment20 = Comment(content='My kids are huge pancake fans, I love pancakes that have wholesome ingredients, particularly oats', recipe=banana_blender_pancakes, user=gessica)
+db.session.add(comment20)
 
 
 lisa = User(
@@ -309,7 +400,10 @@ comment3 = Comment(content='A good way of introducing spinach to my 18 months ol
 db.session.add(comment3)
 comment12 = Comment(content='Very tasty, but the courgette need longer to cook, you have to add them before.', recipe=courgette_carrot_risotto, user=lisa)
 db.session.add(comment12)
-
+comment16 = Comment(content='The Kale smoothie was awesome. Next time going to use less honey than the max mentioned. I didn’t need all that sweetness.', recipe=banana_kiwi_kale_smoothie, user=lisa)
+db.session.add(comment16)
+comment19 = Comment(content='My 2-year-olds are devouring these gorgeous muffins in hushed silence!! I even forgot to peel the zucchini.', recipe=banana_zucchini_wholemeal_muffins, user=lisa)
+db.session.add(comment19)
 
 
 mary = User(
@@ -321,7 +415,10 @@ avatar='https://image.flaticon.com/icons/svg/194/194934.svg'
 db.session.add(mary)
 comment13 = Comment(content='Very good pancakes, so light. Thanks for a great recipe,', recipe=blueberry_pancakes, user=lisa)
 db.session.add(comment13)
-
+comment17 = Comment(content='This chocolate orange banana bread is absolutely delicious! Thank you so much for sharing this recipe!,', recipe=chocolate_orange_banana_bread, user=lisa)
+db.session.add(comment17)
+comment18 = Comment(content='This looks really nice but can I cook the oatmeal in the microwave instead?', recipe=orange_banana_date_oatmeal, user=lisa)
+db.session.add(comment18)
 
 comment4 = Comment(content='As delicious as this looks and sounds, I don\'t think my Oscar is quite ready for fried food yet. Maybe in 3 months time.', recipe=sweet_potato_kale_croquettes, user=lisa)
 comment5 = Comment(content='I made this last week and it was a hit with my twins', recipe=sweet_potato_kale_croquettes, user=mary)
