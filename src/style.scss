@@ -27,6 +27,9 @@ background-color: $maincolor;
 .navbar-item {
   color: #FFFFFF;
 }
+.hero-body{
+  padding: 7rem 1.5rem;
+}
  //HOMEPAGE----------------------------------------------------
 .imagecontainer {
   height: 92vh;
@@ -38,10 +41,11 @@ background-color: $maincolor;
 
 .homebtn {
   font-family: 'Amatic SC', cursive;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
 }
 //-----------------------------------------------------------
+
 
 .user-page{
   display: flex;

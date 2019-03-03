@@ -26,7 +26,7 @@ class Home extends React.Component {
           <div className="imagecontainer">
           </div>
           <Link to={'/ingredients'}>
-            <button className="button homebtn is-success">Choose your Ingredients</button>
+            <button className="button homebtn is-fullwidth is-success">Choose your Ingredients</button>
           </Link>
         </section>
       </div>
