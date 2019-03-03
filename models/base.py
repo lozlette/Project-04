@@ -21,5 +21,5 @@ class BaseModel:
 
 class BaseSchema:
 
-    created_at = fields.DateTime(format='%Y-%m-%d %H:%M:%S')
-    updated_at = fields.DateTime(format='%Y-%m-%d %H:%M:%S')
+    created_at = fields.DateTime(format='%H:%M %d-%m-%Y')
+    updated_at = fields.DateTime(format='%H:%M %d-%m-%Y')

@@ -1,10 +1,5 @@
 @charset 'utf-8';
 
-$maincolor: #d9ffcc;
-
-$navbar-background-color: $maincolor;
-$navbar-item-hover-background-color: darken($maincolor, 10%);
-$hero-background-color: $maincolor;
 
 
 @import "~bulma/sass/utilities/_all.sass";
@@ -19,7 +14,6 @@ $hero-background-color: $maincolor;
 @import "~bulma/sass/layout/section.sass";
 
 .hero {
-background-color: $maincolor;
   .title, .subtitle {
     color: #FFFFFF;
   }
@@ -46,7 +40,11 @@ background-color: $maincolor;
 }
 //-----------------------------------------------------------
 
-
+.commenth3 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  color: #FFFFFF;
+}
 .user-page{
   display: flex;
   justify-content: center;
@@ -106,7 +104,7 @@ background-color: $maincolor;
 .navbar-item {
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .submitingbtn {
