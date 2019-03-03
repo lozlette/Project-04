@@ -34,43 +34,54 @@ class Login extends React.Component{
 
 
   render(){
+    const{email, password} = this.state.data
+
     return(
-      <main className="section">
+      <section className= "hero has-background-primary ">
+        <div className="hero-body">
+          <div className="column is-4 is-offset-4">
+            <h4 className="title has-text-centered">Login</h4>
+            <div className="box">
+              <form onSubmit={this.handleSubmit}>
+                <div className="field">
+                  <div className="control">
+                  </div>
 
-        <div className="container">
-          <form onSubmit={this.handleSubmit}>
-            <h2>Login </h2>
+                  <div className="field">
+                    <label className="label is-large"> Email </label>
+                    <div className="control">
+                      <input
+                        type="email"
+                        className="input"
+                        name="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                  </div>
 
-            <div className="field">
-              <div className="control">
-                <input
-                  className ="input"
-                  name='email'
-                  placeholder="Email"
-                  value= {this.state.data.email}
-                  onChange={this.handleChange}
-                />
-              </div>
+                  <div className="field">
+                    <label className="label is-large"> Password </label>
+                    <div className="control">
+                      <input
+                        className="input"
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <button className="button is-success is-medium is-fullwidth"> Log in</button>
+              </form>
             </div>
-
-            <div className="field">
-              <div className="control">
-                <input
-                  type="password"
-                  className ="input"
-                  name="password"
-                  placeholder="Password"
-                  value= {this.state.data.password}
-                  onChange={this.handleChange}
-                />
-              </div>
-            </div>
-
-            <button className="button is-info"> Log in</button>
-          </form>
+          </div>
         </div>
+      </section>
 
-      </main>
     )
   }
 }

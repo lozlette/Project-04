@@ -14,7 +14,7 @@ class Recipe(db.Model, BaseModel):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
-    image = db.Column(db.String(200), nullable=False)
+    image = db.Column(db.String(300), nullable=False)
     extra_ingredients = db.Column(db.String(500), nullable=False)
     method = db.Column(db.String(1000), nullable=False)
     ingredients = db.relationship('Ingredient', secondary=ingredients_recipes, backref='recipes')

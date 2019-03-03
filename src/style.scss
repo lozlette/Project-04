@@ -1,5 +1,8 @@
 @charset 'utf-8';
 
+$dark: rgba(200, 247, 197, 1);
+$primary: $dark;
+
 @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/sass/base/_all.sass";
 @import "~bulma/sass/elements/button.sass";
@@ -30,11 +33,18 @@
 
 .homebtn {
   font-family: 'Amatic SC', cursive;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
 }
 //-----------------------------------------------------------
+//REGISTER AND LOGIN PAGE---------------------------
+.hero-body{
+  padding: 7rem 1.5rem;
+  color: $primary;
+}
 
+
+//---------------------------------------------
 .commenth3 {
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
