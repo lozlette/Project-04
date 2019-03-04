@@ -1,11 +1,14 @@
-from flask import Blueprint
+from flask import Blueprint, request, g, jsonify
 from models.user import User, UserSchema
+from models.message import Message, MessageSchema
 from lib.secure_route import secure_route
 
 api = Blueprint('users', __name__)
 
 users_schema = UserSchema(many=True)
 user_schema = UserSchema()
+message_schema = MessageSchema()
+messages_schema = MessageSchema()
 
 @api.route('/users', methods=['GET'])
 @secure_route
@@ -18,3 +21,16 @@ def index():
 def show(user_id):
     user = User.query.get(user_id)
     return user_schema.jsonify(user)
+
+@api.route('/users/<int:users_id>/inbox', methods=['POST'])
+@secure_route
+def create(users_id):
+    message, errors = message_schema.load(request.get_json())
+    message.sender = g.current_user
+    message.receiver = User.query.get(users_id)
+
+    if errors:
+        return jsonify(errors), 422
+    message.save()
+
+    return message_schema.jsonify(message)

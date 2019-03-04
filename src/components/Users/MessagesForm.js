@@ -5,6 +5,11 @@ const MessagesForm = ({ handleChangeMessage, handleSubmitMessage, messageText })
     <form onSubmit={handleSubmitMessage}>
       <div className="field">
         <div className="control">
+          <input className="input" type="text" placeholder="To:"></input>
+        </div>
+      </div>
+      <div className="field">
+        <div className="control">
           <textarea
             className="textarea"
             name="content"
@@ -16,7 +21,7 @@ const MessagesForm = ({ handleChangeMessage, handleSubmitMessage, messageText })
           </textarea>
         </div>
       </div>
-      <button className="button is-white is-fullwidth"> Add Message </button>
+      <button className="button is-white is-fullwidth"> SEND </button>
     </form>
   )
 }

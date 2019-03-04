@@ -16,16 +16,3 @@ def index():
 def show(message_id):
     message = Message.query.get(message_id)
     return message_schema.jsonify(message)
-
-@api.route('/messages', methods=['POST'])
-@secure_route
-def create():
-    message, errors = message_schema.load(request.get_json())
-    message.sender = g.current_user
-    message.receiver = message_schema.receiver_id
-
-    if errors:
-        return jsonify(errors), 422
-    message.save()
-
-    return message_schema.jsonify(message)

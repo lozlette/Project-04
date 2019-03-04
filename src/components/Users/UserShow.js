@@ -86,6 +86,7 @@ class UserShow extends React.Component {
         </div>
         <div className="container has-text-centered">
           <div className="column is-4 is-offset-4">
+            <h3 className="title is-3">Swap recipe tips with your friends..</h3>
             <MessagesForm />
           </div>
 
