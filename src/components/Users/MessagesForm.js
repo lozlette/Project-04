@@ -28,7 +28,7 @@ const MessagesForm = ({ handleChange, handleSubmit, data }) => {
           </textarea>
         </div>
       </div>
-      <button className="button is-white is-fullwidth"> SEND </button>
+      <button className="button is-success is-medium is-fullwidth"> SEND </button>
     </form>
   )
 }
