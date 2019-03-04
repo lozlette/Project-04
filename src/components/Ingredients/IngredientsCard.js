@@ -6,8 +6,8 @@ const IngredientsCard = ({ name, image, id }) => {
     <div
       className="image"
       style={{ backgroundImage: `url(${image})` }}
-      id={id}
-    ><span>{name}</span>
+      id={id}>
+      <span>{name}</span>
     </div>
   )
 }

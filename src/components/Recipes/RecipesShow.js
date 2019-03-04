@@ -43,7 +43,6 @@ class RecipesShow extends React.Component {
 
   handleSubmitComment(e){
     e.preventDefault()
-    console.log('HandleSubmit',this.state.commentData)
 
     const commentData = {...this.state.commentData, recipe: this.state.recipe}
     axios
@@ -51,7 +50,6 @@ class RecipesShow extends React.Component {
         { headers: { Authorization: `Bearer ${Auth.getToken()}` }}
       )
       .then(res => {
-        console.log('res', res)
         this.setState({
           commentData: {
             content: ''
@@ -63,9 +61,7 @@ class RecipesShow extends React.Component {
   }
 
   render(){
-    // console.log(this.state)
     if(!this.state.recipe) return <h1>Loading...</h1>
-    console.log(this.state.recipe)
     const {
       image,
       name,
@@ -74,10 +70,9 @@ class RecipesShow extends React.Component {
       ingredients,
       method
     } = this.state.recipe
-    console.log('RECIPE SHOW STATE',this.state)
     return(
 
-      <div>
+      <div className= "wrapper">
         <section className="hero is-success is-small">
           <div className="hero-body">
             <div className="container">
@@ -113,7 +108,7 @@ class RecipesShow extends React.Component {
                   <p className="subtitle is-4">{extraIngredients}</p>
                   <hr/>
                   <h2 className="title is-2">Method</h2>
-                  <p className="subtitle is-4">{method}</p>
+                  <p className="subtitle is-5">{method}</p>
 
                 </article>
               </div>
