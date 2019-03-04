@@ -45,6 +45,10 @@ class User(db.Model, BaseModel):
 
 class UserSchema(ma.ModelSchema, BaseSchema):
 
+    inbox = fields.Nested('MessageSchema', many=True, exclude=('receiver', ))
+    outbox = fields.Nested('MessageSchema', many=True, exclude=('sender', ))
+
+
     @validates_schema
     # pylint: disable=R0201
     def check_passwords_match(self, data):
@@ -59,6 +63,8 @@ class UserSchema(ma.ModelSchema, BaseSchema):
         validate=[validate.Length(min=8, max=50)]
     )
     password_confirmation = fields.String(required=True)
+
+
 
     class Meta:
         model = User
