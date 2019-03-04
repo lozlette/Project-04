@@ -13,9 +13,5 @@ db = SQLAlchemy(app)
 ma = Marshmallow(app)
 bcrypt = Bcrypt(app)
 
-@app.route('/')
-def home():
-    return ('Hello World!'), 200
-
 # pylint: disable=W0611,C0413
 from config import routes
