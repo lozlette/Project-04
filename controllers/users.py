@@ -22,15 +22,17 @@ def show(user_id):
     user = User.query.get(user_id)
     return user_schema.jsonify(user)
 
-@api.route('/users/<int:users_id>/inbox', methods=['POST'])
+@api.route('/users/<int:user_id>/inbox', methods=['POST'])
 @secure_route
-def create(users_id):
+def create(user_id):
     message, errors = message_schema.load(request.get_json())
-    message.sender = g.current_user
-    message.receiver = User.query.get(users_id)
 
     if errors:
         return jsonify(errors), 422
+
+    message.sender = g.current_user
+    message.receiver = User.query.get(user_id)
+
     message.save()
 
     return message_schema.jsonify(message)

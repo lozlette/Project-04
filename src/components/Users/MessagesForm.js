@@ -1,11 +1,18 @@
 import React from 'react'
 
-const MessagesForm = ({ handleChangeMessage, handleSubmitMessage, messageText }) => {
+const MessagesForm = ({ handleChange, handleSubmit, data }) => {
+  console.log(data)
   return(
-    <form onSubmit={handleSubmitMessage}>
+    <form onSubmit={handleSubmit}>
       <div className="field">
         <div className="control">
-          <input className="input" type="text" placeholder="To:"></input>
+          <input
+            className="input"
+            name="receiver_id"
+            type="text"
+            value={data.receiver_id}
+            onChange={handleChange}
+            placeholder="To: (enter username here)"></input>
         </div>
       </div>
       <div className="field">
@@ -14,8 +21,8 @@ const MessagesForm = ({ handleChangeMessage, handleSubmitMessage, messageText })
             className="textarea"
             name="content"
             placeholder="Enter your message here"
-            defaultValue={messageText}
-            onChange={handleChangeMessage}
+            value={data.content}
+            onChange={handleChange}
             maxLength="250"
             rows="6">
           </textarea>
