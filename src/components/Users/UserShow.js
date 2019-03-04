@@ -33,7 +33,7 @@ class UserShow extends React.Component {
 
   handleSubmit(e){
     e.preventDefault()
-    console.log('HandleSubmit',this.state.messageText)
+    console.log('HandleSubmit',this.state.content)
 
     axios
       .post(`/api/users/${this.state.receiver_id}/inbox`, this.state,
@@ -92,7 +92,7 @@ class UserShow extends React.Component {
             <div className="card-content is-centered">
               <div className="content">
                 <h2 className="title usertitle is-2">Inbox:</h2>
-                {inbox.map(item => <p key={username}>{item}</p>)}
+                <p>{inbox[0].content}</p>
               </div>
             </div>
           </div>
