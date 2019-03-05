@@ -53,7 +53,7 @@ class UserShow extends React.Component {
           <div className="hero-body">
             <div className="container">
               <h1 className="title has-text-centered">
-                {username}:
+                {username}'s Profile Page
               </h1>
             </div>
           </div>
@@ -63,21 +63,22 @@ class UserShow extends React.Component {
         <div className="columns is-multiline">
           <div className="column usercolumn is-half has-background-primary">
             <div className="card-image is-centered">
-              <figure className="image is-200x200">
-                <img className="is-rounded" src={avatar} alt={username}/>
+              <figure className="image" id="userimage">
+                <img className="is-square" src={avatar} alt={username}/>
               </figure>
             </div>
           </div>
           <div className="column usercolumn is-half has-background-primary">
             <div className="card-content is-centered">
               <div className="content">
-                <h2 className="title is-2 usertitle">Details:</h2>
-                <p>Email: {email}</p>
+                <h2 className="title is-2" id="h2">Details:</h2>
+                <hr/>
+                <p className="userp">Email: {email}</p>
               </div>
             </div>
           </div>
           <div className="column usercolumn is-half has-background-primary">
-            <h2 className="title usertitle is-2">Swap recipe tips with your friends..</h2>
+            <h2 className="title is-2" id="h2">Swap recipe tips with your friends..</h2>
             <MessagesForm
               handleChange={this.handleChange}
               handleSubmit={this.handleSubmit}
@@ -87,10 +88,17 @@ class UserShow extends React.Component {
           <div className="column usercolumn is-half has-background-primary">
             <div className="card-content is-centered">
               <div className="content">
-                <h2 className="title usertitle is-2">Inbox:</h2>
-                <div className="tile is-white">
+                <h2 className="title is-2" id="h2">Inbox:</h2>
+                <hr/>
+                <div>
                   {inbox.map(item =>
-                    <p key={item.id}>{item.content}</p>)}
+                    <div key={item.id}>
+                      <p className="userp2">From: {item.sender.username}</p>
+                      <p className="userp2">Message:</p>
+                      <h3 id="userh3">{item.content}</h3>
+                      <p className="userp2">On: {item.created_at}</p>
+                      <hr/>
+                    </div>)}
                 </div>
               </div>
             </div>

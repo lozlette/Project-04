@@ -53,13 +53,45 @@ $primary: $dark;
   display: flex;
   justify-content: center;
 }
-.usertitle {
+.usertitle, {
   color: #FFFFFF;
+}
+
+#h2 {
+  color: #FFFFFF;
+  font-size: 50px;
+}
+
+#userimage {
+  height: 300px;
+  width: 300px;
+}
+
+#userh3 {
+  padding-top: 0;
+  color: #FFFFFF;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.userp {
+  color: #FFFFFF;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+}
+
+.userp2 {
+  color: #FFFFFF;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .usercolumn {
   padding: 40px;
 }
+
 .text {
  color: black;
  font-weight: 200px;
@@ -98,11 +130,11 @@ $primary: $dark;
   &:active {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.8);
   }
-  &:visited {
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,.8);
-  }
-}
 
+}
+a:visited {
+  border: 1px solid black;
+}
 .title {
   font-family: 'Amatic SC', cursive;
   font-size: 100px;
