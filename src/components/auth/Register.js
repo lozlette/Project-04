@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import Auth from '../../lib/Auth'
 
+
 class Register extends React.Component{
   constructor (){
     super()
@@ -13,7 +14,8 @@ class Register extends React.Component{
         password: '',
         password_confirmation: '',
         avatar: ''
-      }
+      },
+      errors: {}
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -21,8 +23,9 @@ class Register extends React.Component{
   }
 
   handleChange({target: {name, value}}){
-    const data ={ ...this.state.data, [name]: value}
-    this.setState({data})
+    const data = {...this.state.data, [name]: value }
+    const errors = { ...this.state.errors, [name]: '' }
+    this.setState({ data, errors })
   }
 
 
@@ -34,8 +37,7 @@ class Register extends React.Component{
         Auth.setToken(res.data.token)
         this.props.history.push('/login')
       })
-      .catch(err => this.setState({ errors: err.response.data.error }))
-      .then(() => console.log(this.state))
+      .catch((err) => this.setState({errors: err.response.data}))
   }
   render(){
     const{username,email, password, password_confirmation, avatar} = this.state.data
@@ -60,6 +62,10 @@ class Register extends React.Component{
                         value={username}
                         onChange={this.handleChange}
                       />
+                      <span className="icon is-small is-left">
+                        <i className="fas fa-user"></i>
+                      </span>
+                      {this.state.errors.username && <small className="help is-danger">{this.state.errors.username}</small>}
                     </div>
                   </div>
                   <div className="field">
@@ -73,6 +79,15 @@ class Register extends React.Component{
                         value={email}
                         onChange={this.handleChange}
                       />
+                      <span className="icon is-small is-left">
+                        <i className="fas fa-envelope"></i>
+                      </span>
+                      {this.state.errors.email && (
+                        <small
+                          className="help is-danger">
+                          {this.state.errors.email}
+                        </small>
+                      )}
                     </div>
                   </div>
                   <div className="field">
@@ -86,6 +101,10 @@ class Register extends React.Component{
                         value={password}
                         onChange={this.handleChange}
                       />
+                      <span className="icon is-small is-left">
+                        <i className="fas fa-user"></i>
+                      </span>
+                      {this.state.errors.password && <small className="help is-danger">{this.state.errors.password}</small>}
                     </div>
                   </div>
                   <div className="field">
@@ -99,6 +118,10 @@ class Register extends React.Component{
                         value={password_confirmation}
                         onChange={this.handleChange}
                       />
+                      <span className="icon is-small is-left">
+                        <i className="fas fa-user"></i>
+                      </span>
+                      {this.state.errors.password_confirmation && <small className="help is-danger">{this.state.errors.password_confirmation}</small>}
                     </div>
                   </div>
 
@@ -113,6 +136,10 @@ class Register extends React.Component{
                         value={avatar}
                         onChange={this.handleChange}
                       />
+                      <span className="icon is-small is-left">
+                        <i className="fas fa-user"></i>
+                      </span>
+                      {this.state.errors.image && <small className="help is-danger">{this.state.errors.image}</small>}
                     </div>
                   </div>
                 </div>

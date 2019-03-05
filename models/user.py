@@ -13,7 +13,7 @@ class User(db.Model, BaseModel):
     username = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(100), nullable=False)
     password_hash = db.Column(db.String(128), nullable=True)
-    avatar = db.Column(db.String(200), nullable=False)
+    avatar = db.Column(db.String(200), nullable=True)
 
     @hybrid_property
     def password(self):
@@ -54,15 +54,48 @@ class UserSchema(ma.ModelSchema, BaseSchema):
     def check_passwords_match(self, data):
         if data.get('password') != data.get('password_confirmation'):
             raise ValidationError(
-                'Passwords do not match',
+                'Password is needed',
                 'password_confirmation'
             )
 
+
+
+    username = fields.String(
+        required=True,
+        validate=[validate.Length(
+            min=1,
+            max=50,
+            error='A Username is required'
+        )],
+    )
+
+    email = fields.String(
+        required=True,
+        validate=[validate.Length(
+        min=1,
+        max=50,
+        error='An Email is required'
+        )],
+    )
+
     password = fields.String(
         required=True,
-        validate=[validate.Length(min=8, max=50)]
+        validate=[validate.Length(
+        min=8,
+        max=50,
+        error='A Password is required'
+        )],
     )
-    password_confirmation = fields.String(required=True)
+
+
+    password_confirmation = fields.String(
+        required=True,
+        validate=[validate.Length(
+        min=8,
+        max=50,
+        error='A Password Confirmation is required'
+        )],
+    )
 
 
 

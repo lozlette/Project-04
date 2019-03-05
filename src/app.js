@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import UserShow from './components/Users/UserShow'
+import FlashMessages from './components/common/FlashMessages'
 import 'bulma'
 import './style.scss'
 
@@ -23,6 +24,8 @@ class App extends React.Component{
           <main>
 
             <Navbar />
+            <FlashMessages/>
+            
             <Switch>
               <Route path="/recipes/:id" component={RecipesShow} />
               <Route path="/ingredients" component={IngredientsIndex} />
