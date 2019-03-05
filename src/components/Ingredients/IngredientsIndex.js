@@ -4,6 +4,7 @@ import axios from 'axios'
 import IngredientsCard from './IngredientsCard'
 import Auth from '../../lib/Auth'
 import _ from 'lodash'
+import Flash from '../../lib/Flash'
 
 class IngredientsIndex extends React.Component {
   constructor() {
@@ -26,9 +27,14 @@ class IngredientsIndex extends React.Component {
   }
 
   handleClick(e){
-    if(this.state.choices.length < 2)this.state.choices.push(parseInt(e.target.id))
+    let choices
+    if(this.state.choices.length < 2) {
+      choices = [...this.state.choices, parseInt(e.target.id)]
+      this.setState({ choices })
+    }
     console.log('CHOICE', this.state.choices)
     console.log('STATE', this.state)
+    console.log('IDs', e.target.id)
   }
 
   handleSubmit(){
@@ -36,8 +42,12 @@ class IngredientsIndex extends React.Component {
       const ingredientIds = recipe.ingredients.map(ingredient => ingredient.id)
       return _.intersection(ingredientIds, this.state.choices).length === 2
     })
-    this.props.history.push(`/recipes/${resultRecipes[0].id}`)
-    console.log(resultRecipes)
+    if (resultRecipes.length < 1){
+      console.log('NOT FOUND')
+      this.props.history.push('/ingredients')
+      Flash.setMessage('white', 'Sorry there is no recipe for that combination of ingredients')
+      this.setState( { choices: []})
+    } else this.props.history.push(`/recipes/${resultRecipes[0].id}`)
   }
 
   render(){
@@ -60,7 +70,12 @@ class IngredientsIndex extends React.Component {
         <div className="columns is-multiline">
           {this.state.ingredients.map(ingredient =>
             <div className="column is-one-quarter" key={ingredient.id}>
-              <button onClick={this.handleClick} className="ingredientBtn"><IngredientsCard {...ingredient}/></button>
+              <button onClick={this.handleClick}
+                className={`
+                  ingredientBtn
+                  ${this.state.choices.includes(parseInt(ingredient.id)) ? 'selected':ingredient.id}`}>
+                <IngredientsCard {...ingredient} />
+              </button>
             </div>
           )}
         </div>

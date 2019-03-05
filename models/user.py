@@ -45,7 +45,7 @@ class User(db.Model, BaseModel):
 
 class UserSchema(ma.ModelSchema, BaseSchema):
 
-    inbox = fields.Nested('MessageSchema', many=True, exclude=('receiver', ))
+    inbox = fields.Nested('MessageSchema', many=True, include=('receiver_id', 'content', 'sender'))
     outbox = fields.Nested('MessageSchema', many=True, exclude=('sender', ))
 
 

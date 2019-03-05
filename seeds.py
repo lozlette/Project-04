@@ -163,22 +163,12 @@ ingredients=[kale, sweet_potato],
 db.session.add(sweet_potato_kale_croquettes)
 
 
-butternut_squash_apple_prune = Recipe(
-name='Butternut Squash, Apple and Prune',
-image='https://www.annabelkarmel.com/wp-content/uploads/2017/07/Butternut-Squash-Carrot-and-Apple-380x315.png',
-extra_ingredients='100 g 1 medium carrot, peeled and sliced, 200 g butternut squash, peeled, deseeded and chopped,50 g 1 small dessert apple, peeled, cored and chopped, 10 g prunes, chopped',
-method='1.Put the carrot and squash into a steamer and cook for 5 minutes. 2.Add the apple and prunes and continue to steam for 10 minutes, until all the ingredients are tender. 3.Blend with about 2 tablespoons of water from the steamer. s4.Serve with breast milk or formula if serving as First Foods Lunch.',
-ingredients=[apple]
-)
-db.session.add(butternut_squash_apple_prune)
-
-
 spiralized_vegetables_roasted_red_pepper_tomato_pesto = Recipe(
 name='Spiralized Vegetables with Roasted Red Pepper & Tomato Pesto',
 image='https://www.annabelkarmel.com/wp-content/uploads/2015/08/Spiralized_Vegetables_with_Roasted_Red_Pepper_and_Tomato_Pesto-3-380x315.jpg',
 extra_ingredients='2 Romero red peppers, deseeded & roughly chopped,650 g cherry tomatoes, halved, 8 tbsp olive oil,3 cloves garlic,100 g pine nuts, toasted, 75 g Italian hard-style cheese, grated,30 g basil, chopped, 1/4 red chilli, deseeded & diced, 5 large courgettes, 4 large carrots, peeled',
 method='1.Preheat the oven to 140 Fan. To make the pesto, put the peppers onto a baking sheet. Drizzle over 1 tbsp of oil and season. 2.Put the tomatoes onto a baking sheet. Drizzle over 1 tbsp of oil and season. 3.Put both baking sheets into the oven for 45 minutes until semi dried. Leave to cool. 4.Put the cold peppers and tomatoes into a food processor with the remaining oil, garlic, 75g of pinenuts, basil, cheese and chilli. Whiz until smooth and season. 5.Put the courgettes and carrots through a spiralizer to make long spaghetti. Heat a frying pan until hot. Add a little oil. Quickly fry the carrots for 4 – 5 minutes then add the courgettes for 2 minutes, tossing together lightly. 6.Warm the pesto and mix with the vegetables and reserved pinenuts.',
-ingredients=[pepper]
+ingredients=[pepper, tomatoes]
 )
 db.session.add(spiralized_vegetables_roasted_red_pepper_tomato_pesto)
 
@@ -191,16 +181,6 @@ method='Preheat the oven to 180⁰C/Gas 4. Line two baking sheets with non stick
 ingredients=[orange,chocolate]
 )
 db.session.add(chocolate_orange_shortbread)
-
-
-cod_couscous_balls = Recipe(
-name='Cod & Couscous Balls',
-image='https://www.annabelkarmel.com/wp-content/uploads/2019/02/AK-2201201900275_8357_Uncropped-380x315.jpg',
-extra_ingredients='1 fillet of Cod 100g,couscous (cooked and cooled), 4 spring onions, sliced, 1 small carrot, peeled and grated, ½ apple, peeled and grated, 40g Parmesan, grated, 2 tbsp fresh basil , chopped, 1 egg yolk',
-method='Measure all of the ingredients into a food processor. Whiz until finely chopped. Add the egg yolk and season lightly. Shape into 20 balls. 2.Place on a baking sheet lined with non stick paper and drizzle with a little oil. 3. Bake for 20 minutes turning over halfway through the cooking time.',
-ingredients=[cod]
-)
-db.session.add(cod_couscous_balls)
 
 
 avocado_banana_puree = Recipe(
@@ -439,8 +419,20 @@ comment9 = Comment(content='Another fun way to get green in your baked goods –
 db.session.add(comment8)
 db.session.add(comment9)
 
-message1 = Message(content='Hello Mary', receiver=mary, sender=lisa)
+#MESSAGES
+message1 = Message(content='Hello Mary, have you tried the Kale and Chocolate Cookies? Did your kids actually eat them?', receiver=mary, sender=lisa)
 db.session.add(message1)
 
+message2 = Message(content='Hello Lisa, Yes I\'ve tried them and they both loved them!!!', receiver=lisa, sender=mary)
+db.session.add(message2)
+
+message3 = Message(content='Hello Mary, have you tried the spelt flour option?', receiver=mary, sender=lisa)
+db.session.add(message3)
+
+message4 = Message(content='I did but they were very crumbly.', receiver=lisa, sender=mary)
+db.session.add(message4)
+
+message5 = Message(content='Ok thanks, I will not try that then.', receiver=lisa, sender=mary)
+db.session.add(message5)
 
 db.session.commit()

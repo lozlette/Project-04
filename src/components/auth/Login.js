@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-
 import Auth from '../../lib/Auth'
+import Flash from '../../lib/Flash'
 
 class Login extends React.Component{
   constructor(){
@@ -11,14 +11,16 @@ class Login extends React.Component{
       data: {
         email: '',
         password: ''
-      }
+      },
+      errors: {}
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleChange({target: {name, value}}){
-    const data = {...this.state.data, [name]: value}
-    this.setState({data})
+    const data = {...this.state.data, [name]: value }
+    const errors = { ...this.state.errors, message: ''}
+    this.setState({ data, errors })
   }
 
   handleSubmit(e) {
@@ -27,9 +29,10 @@ class Login extends React.Component{
       .post('/api/login', this.state.data)
       .then(res => {
         Auth.setToken(res.data.token)
+        Flash.setMessage('white', 'Welcome back!')
         this.props.history.push('/')
       })
-      .catch(() => this.setState({errors: 'Invalid credentials'}))
+      .catch((err) => this.setState({errors: err.response.data }))
   }
 
 
@@ -58,6 +61,7 @@ class Login extends React.Component{
                         value={email}
                         onChange={this.handleChange}
                       />
+
                     </div>
                   </div>
 
@@ -72,6 +76,7 @@ class Login extends React.Component{
                         value={password}
                         onChange={this.handleChange}
                       />
+                      {this.state.errors.message && <small className="help is-danger">Incorrect credentials, please try again!</small>}
                     </div>
                   </div>
                 </div>
