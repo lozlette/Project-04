@@ -53,13 +53,45 @@ $primary: $dark;
   display: flex;
   justify-content: center;
 }
-.usertitle {
+.usertitle, {
   color: #FFFFFF;
 }
 
-.usercolumn {
-  padding: 20px;
+#h2 {
+  color: #FFFFFF;
+  font-size: 50px;
 }
+
+#userimage {
+  height: 300px;
+  width: 300px;
+}
+
+#userh3 {
+  padding-top: 0;
+  color: #FFFFFF;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.userp {
+  color: #FFFFFF;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+}
+
+.userp2 {
+  color: #FFFFFF;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.usercolumn {
+  padding: 40px;
+}
+
 .text {
  color: black;
  font-weight: 200px;
