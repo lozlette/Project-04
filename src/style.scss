@@ -102,7 +102,9 @@ $primary: $dark;
   height:15rem;
   padding: 3%;
 
-
+  &.selected{
+    border: 5px solid black;
+  }
 }
 
 .image {
@@ -130,11 +132,11 @@ $primary: $dark;
   &:active {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.8);
   }
+  &:visited {
+    background-color: black;
+  }
+}
 
-}
-a:visited {
-  border: 1px solid black;
-}
 .title {
   font-family: 'Amatic SC', cursive;
   font-size: 100px;
