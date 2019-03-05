@@ -58,17 +58,17 @@ class UserShow extends React.Component {
             </div>
           </div>
         </section>
-        <div className="container has-background-primary has-content-centered">
-          <div className="column user-page">
+
+
+        <div className="columns is-multiline">
+          <div className="column usercolumn is-half has-background-primary">
             <div className="card-image is-centered">
               <figure className="image is-200x200">
                 <img className="is-rounded" src={avatar} alt={username}/>
               </figure>
             </div>
           </div>
-        </div>
-        <div className="container has-background-primary has-text-centered">
-          <div className="column">
+          <div className="column usercolumn is-half has-background-primary">
             <div className="card-content is-centered">
               <div className="content">
                 <h2 className="title is-2 usertitle">Details:</h2>
@@ -76,9 +76,7 @@ class UserShow extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="container has-background-primary has-text-centered">
-          <div className="column is-4 is-offset-4">
+          <div className="column usercolumn is-half has-background-primary">
             <h2 className="title usertitle is-2">Swap recipe tips with your friends..</h2>
             <MessagesForm
               handleChange={this.handleChange}
@@ -86,13 +84,14 @@ class UserShow extends React.Component {
               data={this.state}
             />
           </div>
-        </div>
-        <div className="container has-background-primary has-text-centered">
-          <div className="column is-4 is-offset-4">
+          <div className="column usercolumn is-half has-background-primary">
             <div className="card-content is-centered">
               <div className="content">
                 <h2 className="title usertitle is-2">Inbox:</h2>
-                <p>{inbox[0].content}</p>
+                <div className="tile is-white">
+                  {inbox.map(item =>
+                    <p key={item.id}>{item.content}</p>)}
+                </div>
               </div>
             </div>
           </div>

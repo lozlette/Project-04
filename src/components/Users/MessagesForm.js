@@ -25,29 +25,18 @@ class MessagesForm extends React.Component {
     return(
       <form onSubmit={handleSubmit}>
         <div className="field">
-          <div className="control">
+          <div className="control has-icons-left">
             <div className="select is-fullwidth">
-              <select>
+              <select name="receiver_id" onChange={handleChange}>
                 <option>To:</option>
                 {this.state.users.map(user =>
-                  <option key={user.id}
-                    value={data.receiver_id}
-                    onChange={handleChange}
-                    name="receiver_id"
-                  >{user.username} </option> )}
+                  <option key={user.id} value={user.id}>{user.username}</option>
+                )}
               </select>
+              <div className="icon is-small is-left">
+                <i className="fas fa-envelope"></i>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="field">
-          <div className="control">
-            <input
-              className="input"
-              name="receiver_id"
-              type="text"
-              value={data.receiver_id}
-              onChange={handleChange}
-              placeholder="To: (enter username here)"></input>
           </div>
         </div>
         <div className="field">
