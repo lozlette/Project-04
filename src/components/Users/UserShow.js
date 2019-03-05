@@ -93,7 +93,7 @@ class UserShow extends React.Component {
                 <div>
                   {inbox.map(item =>
                     <div key={item.id}>
-                      <p className="userp2">From: {item.sender.username}</p>
+                      <p className="userp2 ">From: {item.sender.username}</p>
                       <p className="userp2">Message:</p>
                       <h3 id="userh3">{item.content}</h3>
                       <p className="userp2">On: {item.created_at}</p>
