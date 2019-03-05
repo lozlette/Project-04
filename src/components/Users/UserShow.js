@@ -33,7 +33,7 @@ class UserShow extends React.Component {
 
   handleSubmit(e){
     e.preventDefault()
-    console.log('HandleSubmit',this.state.messageText)
+    console.log('HandleSubmit',this.state.content)
 
     axios
       .post(`/api/users/${this.state.receiver_id}/inbox`, this.state,
@@ -48,7 +48,7 @@ class UserShow extends React.Component {
     if(!this.state.user) return <h1>Loading...</h1>
     const { username, email, avatar, inbox} = this.state.user
     return (
-      <div className="body">
+      <div>
         <section className="hero is-success is-small">
           <div className="hero-body">
             <div className="container">
@@ -58,27 +58,25 @@ class UserShow extends React.Component {
             </div>
           </div>
         </section>
-        <div className="container has-background-primary has-content-centered">
-          <div className="column user-page">
+
+
+        <div className="columns is-multiline">
+          <div className="column usercolumn is-half has-background-primary">
             <div className="card-image is-centered">
               <figure className="image is-200x200">
                 <img className="is-rounded" src={avatar} alt={username}/>
               </figure>
             </div>
           </div>
-        </div>
-        <div className="container has-background-primary has-text-centered">
-          <div className="column">
+          <div className="column usercolumn is-half has-background-primary">
             <div className="card-content is-centered">
               <div className="content">
                 <h2 className="title is-2 usertitle">Details:</h2>
-                <p className= "email">Email: {email}</p>
+                <p>Email: {email}</p>
               </div>
             </div>
           </div>
-        </div>
-        <div className="container has-background-primary has-text-centered">
-          <div className="column is-4 is-offset-4">
+          <div className="column usercolumn is-half has-background-primary">
             <h2 className="title usertitle is-2">Swap recipe tips with your friends..</h2>
             <MessagesForm
               handleChange={this.handleChange}
@@ -86,13 +84,14 @@ class UserShow extends React.Component {
               data={this.state}
             />
           </div>
-        </div>
-        <div className="container has-background-primary has-text-centered">
-          <div className="column is-4 is-offset-4">
+          <div className="column usercolumn is-half has-background-primary">
             <div className="card-content is-centered">
               <div className="content">
                 <h2 className="title usertitle is-2">Inbox:</h2>
-                {inbox.map(item => <p key={username}>{item}</p>)}
+                <div className="tile is-white">
+                  {inbox.map(item =>
+                    <p key={item.id}>{item.content}</p>)}
+                </div>
               </div>
             </div>
           </div>
