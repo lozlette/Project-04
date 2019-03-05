@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import Auth from '../../lib/Auth'
 import Flash from '../../lib/Flash'
+
 class Login extends React.Component{
   constructor(){
     super()
@@ -18,7 +19,7 @@ class Login extends React.Component{
   }
   handleChange({target: {name, value}}){
     const data = {...this.state.data, [name]: value }
-    const errors = { ...this.state.errors, [name]: '' }
+    const errors = { ...this.state.errors, [name]: ''}
     this.setState({ data, errors })
   }
 
@@ -60,10 +61,10 @@ class Login extends React.Component{
                         value={email}
                         onChange={this.handleChange}
                       />
-                      {this.state.errors.email && (
+                      {this.state.errors.message && (
                         <small
                           className="help is-danger">
-                          {this.state.errors.email}
+                          {this.state.errors.message}
                         </small>
                       )}
                     </div>
@@ -80,7 +81,7 @@ class Login extends React.Component{
                         value={password}
                         onChange={this.handleChange}
                       />
-                      {this.state.errors.password && <small className="help is-danger">{this.state.errors.password}</small>}
+                      {this.state.errors.message && <small className="help is-danger">{this.state.errors.message}</small>}
                     </div>
                   </div>
                 </div>

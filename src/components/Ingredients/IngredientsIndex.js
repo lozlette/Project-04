@@ -4,6 +4,7 @@ import axios from 'axios'
 import IngredientsCard from './IngredientsCard'
 import Auth from '../../lib/Auth'
 import _ from 'lodash'
+import Flash from '../../lib/Flash'
 
 class IngredientsIndex extends React.Component {
   constructor() {
@@ -36,6 +37,7 @@ class IngredientsIndex extends React.Component {
       const ingredientIds = recipe.ingredients.map(ingredient => ingredient.id)
       return _.intersection(ingredientIds, this.state.choices).length === 2
     })
+
     this.props.history.push(`/recipes/${resultRecipes[0].id}`)
     console.log(resultRecipes)
   }

@@ -420,8 +420,19 @@ db.session.add(comment8)
 db.session.add(comment9)
 
 #MESSAGES
-message1 = Message(content='Hello Mary', receiver=mary, sender=lisa)
+message1 = Message(content='Hello Mary, have you tried the Kale and Chocolate Cookies? Did your kids actually eat them?', receiver=mary, sender=lisa)
 db.session.add(message1)
 
+message2 = Message(content='Hello Lisa, Yes I\'ve tried them and they both loved them!!!', receiver=lisa, sender=mary)
+db.session.add(message2)
+
+message3 = Message(content='Hello Mary, have you tried the spelt flour option?', receiver=mary, sender=lisa)
+db.session.add(message3)
+
+message4 = Message(content='I did but they were very crumbly.', receiver=lisa, sender=mary)
+db.session.add(message4)
+
+message5 = Message(content='Ok thanks, I will not try that then.', receiver=lisa, sender=mary)
+db.session.add(message5)
 
 db.session.commit()

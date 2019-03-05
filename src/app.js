@@ -25,7 +25,7 @@ class App extends React.Component{
 
             <Navbar />
             <FlashMessages/>
-            
+
             <Switch>
               <Route path="/recipes/:id" component={RecipesShow} />
               <Route path="/ingredients" component={IngredientsIndex} />
