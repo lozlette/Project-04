@@ -4,6 +4,7 @@ import axios from 'axios'
 import IngredientsCard from './IngredientsCard'
 import Auth from '../../lib/Auth'
 import _ from 'lodash'
+import Flash from '../../lib/Flash'
 
 class IngredientsIndex extends React.Component {
   constructor() {
@@ -36,8 +37,11 @@ class IngredientsIndex extends React.Component {
       const ingredientIds = recipe.ingredients.map(ingredient => ingredient.id)
       return _.intersection(ingredientIds, this.state.choices).length === 2
     })
-    this.props.history.push(`/recipes/${resultRecipes[0].id}`)
-    console.log(resultRecipes)
+    if (resultRecipes.length < 1){
+      console.log('NOT FOUND')
+      this.props.history.push('/ingredients')
+      Flash.setMessage('white', 'Sorry there is no recipe for that combination of ingredients')
+    } else this.props.history.push(`/recipes/${resultRecipes[0].id}`)
   }
 
   render(){

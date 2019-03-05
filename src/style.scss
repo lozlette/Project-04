@@ -58,7 +58,7 @@ $primary: $dark;
 }
 
 .usercolumn {
-  padding: 40px;
+  padding: 20px;
 }
 .text {
  color: black;
@@ -98,11 +98,11 @@ $primary: $dark;
   &:active {
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.8);
   }
-  &:visited {
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,.8);
-  }
-}
 
+}
+a:visited {
+  border: 1px solid black;
+}
 .title {
   font-family: 'Amatic SC', cursive;
   font-size: 100px;
