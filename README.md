@@ -60,13 +60,11 @@ This was a project with one other developer, [Gessica Santoro](https://github.co
 
 ![trello board](https://user-images.githubusercontent.com/42389173/53879448-6f222180-4006-11e9-8b6d-1b1abf8bc124.png)
 
-We started the project by planning our models and database structure. We did some pair coding to set up the basics.
+We started the project by planning our models and database structure. I then set up the basics while Gessica worked on setting up the seeds file, so that we had some data to work with on the front end.
 
-We then worked on setting up the seeds file, so that we had some data to work with on the front end.
+Once the server side code was working and had been tested by making API requests with Insomnia, then we moved onto creating the frontend using React. We divide up the components and Gessica worked on the Register and Log in forms while I worked on the ingredients index and Recipe show pages. We later added the user profile page. We pair coded to work on the logic to display a recipe based on the users two ingredient choices.
 
-Once the serve side code was working and had been tested by making API requests with Insomnia, then we moved onto creating the frontend using React. We divide up the components and Gessica worked on the Register and Log in forms while I worked on the ingredients index and Recipe show pages. We later added the user profile page, which we both worked on.
-
-We worked on adding some extra features such as commenting on recipes, and internal messaging from user to user.
+I worked on adding some extra features such as commenting on recipes, and internal messaging from user to user, while Gessica added error messages and worked on testing. We later pair coded to add flash messages.
 
 We used Bulma and SCSS for the styling of the site. We used our wireframes throughout the process, to which some changes were made as we worked.
 
