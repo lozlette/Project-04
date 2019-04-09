@@ -60,6 +60,7 @@ This was a project with one other developer, [Gessica Santoro](https://github.co
 
 ![trello board](https://user-images.githubusercontent.com/42389173/53879448-6f222180-4006-11e9-8b6d-1b1abf8bc124.png)
 
+<<<<<<< HEAD
 We started the project by planning our models and database structure. I then set up the models and controllers. This proved to be a challenge due to the relationships needed between models. (Please see challenges below). Gessica worked on setting up the seeds file, so that we had some data to work with on the front end.
 
 Once the server side code was working and had been tested by making API requests with Insomnia, then we moved onto creating the frontend using React. We divided up the components and Gessica worked on the Register and Log in forms while I worked on the Ingredients Index and Recipe Show pages. We later added the user profile page.
@@ -78,6 +79,13 @@ Next I decided to add the extra feature of internal messaging from user to user.
 Gessica then added error messages and worked on testing our app.
 
 We later pair coded to add flash messages.
+=======
+We started the project by planning our models and database structure. I then set up the basics while Gessica worked on setting up the seeds file, so that we had some data to work with on the front end.
+
+Once the server side code was working and had been tested by making API requests with Insomnia, then we moved onto creating the frontend using React. We divide up the components and Gessica worked on the Register and Log in forms while I worked on the ingredients index and Recipe show pages. We later added the user profile page. We pair coded to work on the logic to display a recipe based on the users two ingredient choices.
+
+I worked on adding some extra features such as commenting on recipes, and internal messaging from user to user, while Gessica added error messages and worked on testing. We later pair coded to add flash messages.
+>>>>>>> 10d4e076353a49e65732849af9fc89a4f96927b6
 
 We used Bulma and SCSS for the styling of the site. We used our wireframes throughout the process, to which some changes were made as we worked.
 
