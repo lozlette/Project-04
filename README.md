@@ -60,17 +60,31 @@ This was a project with one other developer, [Gessica Santoro](https://github.co
 
 ![trello board](https://user-images.githubusercontent.com/42389173/53879448-6f222180-4006-11e9-8b6d-1b1abf8bc124.png)
 
-We started the project by planning our models and database structure. We did some pair coding to set up the basics.
+We started the project by planning our models and database structure. I then set up the models and controllers. This proved to be a challenge due to the relationships needed between models. (Please see challenges below). Gessica worked on setting up the seeds file, so that we had some data to work with on the front end.
 
-We then worked on setting up the seeds file, so that we had some data to work with on the front end.
+Once the server side code was working and had been tested by making API requests with Insomnia, then we moved onto creating the frontend using React. We divided up the components and Gessica worked on the Register and Log in forms while I worked on the Ingredients Index and Recipe Show pages. We later added the user profile page.
 
-Once the serve side code was working and had been tested by making API requests with Insomnia, then we moved onto creating the frontend using React. We divide up the components and Gessica worked on the Register and Log in forms while I worked on the ingredients index and Recipe show pages. We later added the user profile page, which we both worked on.
+We pair coded to work on the logic to display a recipe based on the users two ingredient choices. This proved to be a challenge, and we had to install an extra JS array methods library called Lodash in order to help with the logic in getting two ingredients choices to display one recipe. See code screenshot here for the intersection method used.
+![intersection method](https://user-images.githubusercontent.com/7090684/55801976-2a8b1980-5acf-11e9-859a-6e86c60b466e.png)
 
-We worked on adding some extra features such as commenting on recipes, and internal messaging from user to user.
+I then worked on the extra feature of commenting on recipes, when a user is logged in. First I set up the comment model and comments controller, and added the create route for comments to the recipes controller. I also set up the route.
+![createroute](https://user-images.githubusercontent.com/7090684/55802261-c6b52080-5acf-11e9-9db5-680eafdb1734.png)
+On the front end I then worked on building the comments form component and displayed this within the RecipesShow page.
+
+
+Next I decided to add the extra feature of internal messaging from user to user. As with comments I set up the model and controller, and the route. I found that the challenge was working out what to set as the message receiver in the create route in the User controller.
+![messagescreateroute](https://user-images.githubusercontent.com/7090684/55802602-7ab6ab80-5ad0-11e9-8e53-09563754d2b7.png)
+
+Gessica then added error messages and worked on testing our app.
+
+We later pair coded to add flash messages.
 
 We used Bulma and SCSS for the styling of the site. We used our wireframes throughout the process, to which some changes were made as we worked.
 
 ### Challenges
+
+Setting up the relationships between the models on the backend was a challenge. For example for the recipes model, there was a join table needed between ingredients and recipes, as well as nested comment and ingredient schemas.
+![recipesmodel](https://user-images.githubusercontent.com/7090684/55801474-185cab80-5ace-11e9-82f4-63b0b46a047c.png)
 
 The logic involved in getting the page to redirect to a specific recipe based on the two ingredients chosen was a challenge.
 
