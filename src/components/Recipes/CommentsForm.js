@@ -13,7 +13,6 @@ const CommentsForm = ({ handleChangeComment, handleSubmitComment, commentData })
             onChange={handleChangeComment}
             maxLength="250"
             rows="6">
-            {this.props.errors.message && <small className="help is-danger">Please register and log in to leave a comment!</small>}
           </textarea>
         </div>
       </div>
