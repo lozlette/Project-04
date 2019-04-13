@@ -41,6 +41,7 @@ class Register extends React.Component{
   }
   render(){
     const{username,email, password, password_confirmation, avatar} = this.state.data
+    console.log(this.state.errors.username)
 
     return(
       <section className= "hero has-background-primary">

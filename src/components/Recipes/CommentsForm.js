@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CommentsForm = ({ handleChangeComment, handleSubmitComment, commentData }) => {
+const CommentsForm = ({ handleChangeComment, handleSubmitComment, commentData, errors }) => {
   return(
     <form onSubmit={handleSubmitComment}>
       <div className="field">
@@ -13,6 +13,7 @@ const CommentsForm = ({ handleChangeComment, handleSubmitComment, commentData })
             onChange={handleChangeComment}
             maxLength="250"
             rows="6">
+          
           </textarea>
         </div>
       </div>

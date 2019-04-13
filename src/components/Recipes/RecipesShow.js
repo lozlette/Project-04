@@ -11,7 +11,8 @@ class RecipesShow extends React.Component {
 
     this.state = {
       commentData: {
-        content: ''
+        content: '',
+        errors: {}
       }
 
     }
@@ -33,9 +34,10 @@ class RecipesShow extends React.Component {
   }
 
   handleChangeComment({ target: {name, value }}) {
-    // console.log(name)
     const commentData = {...this.state.commentData, [name]: value }
-    this.setState({ commentData })
+    const errors = { ...this.state.errors, [name]: 'Please log in to leave a comment' }
+    this.setState({ commentData, errors })
+    console.log(this.state.errors)
   }
 
   handleSubmitComment(e){
@@ -54,7 +56,9 @@ class RecipesShow extends React.Component {
         })
         this.getRecipe()
       })
-      .catch(err => alert(err.message))
+      .catch((err) => this.setState({errors: err.response.data}))
+    console.log(this.state.errors)
+
   }
 
   render(){
@@ -118,6 +122,7 @@ class RecipesShow extends React.Component {
                       handleChangeComment={this.handleChangeComment}
                       handleSubmitComment={this.handleSubmitComment}
                       commentData={this.state.commentData}
+                      errors={this.state.errors}
                     />
                   }
 
